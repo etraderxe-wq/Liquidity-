@@ -1,6 +1,6 @@
 ---
 name: emullax-carousel
-description: Build an Instagram carousel (كورسيل انستقرام) in the official EMULLAX / LIQUIDITY GROUP blue brand identity — 1080x1350 PNG slides from Arabic text. Use whenever Ebrahim (@emullax) asks for a carousel, كورسيل, سلايدات انستقرام, بوست شرائح, or "سوها كورسيل" — every carousel must use this exact look unless he asks otherwise.
+description: Build an Instagram carousel (كورسيل انستقرام) AND its matching Reel in the official EMULLAX / LIQUIDITY GROUP blue brand identity — 1080x1350 PNG slides plus a 1080x1920 MP4 reel from Arabic text. Use whenever Ebrahim (@emullax) asks for a carousel, كورسيل, سلايدات انستقرام, بوست شرائح, or "سوها كورسيل" — every carousel must use this exact look and always ships with the reel version unless he asks otherwise.
 ---
 
 # EMULLAX Instagram Carousel
@@ -28,9 +28,15 @@ Every carousel for @emullax uses this one look. Do not switch to the gold daily-
    python3 .claude/skills/emullax-carousel/scripts/build.py content.json carousels/<slug>
    node .claude/skills/emullax-carousel/scripts/render.js carousels/<slug>
    ```
+   Then ALWAYS make the reel too:
+   ```bash
+   node .claude/skills/emullax-carousel/scripts/render.js carousels/<slug> --reel   # reel/frame-XX.png 1080x1920
+   python3 .claude/skills/emullax-carousel/scripts/reel.py carousels/<slug>         # reel.mp4 (~40 s render)
+   ```
+   The reel is the same slides in 9:16 (header/footer kept clear of Instagram's UI), each held 3.5–7 s by word count, slow push-in, 0.5 s fades, 30 fps, **no audio** — he adds the music himself in Instagram.
    `render.js` reports any OVERFLOW (exit 1). Fix by splitting the slide or setting `dense` — never by shrinking fonts below the stylesheet sizes.
-4. Look at every PNG yourself (or a contact sheet): Arabic joined, nothing clipped, logo crisp.
-5. Commit PNGs to `carousels/<slug>/` (delete `carousel.html` or keep it, it's self-referencing the skill assets) and send the slides to the user.
+4. Look at every PNG yourself (or a contact sheet): Arabic joined, nothing clipped, logo crisp. For the reel, pull 3–4 frames with `ffmpeg -ss T -i reel.mp4 -frames:v 1` and check duration with ffprobe.
+5. Commit `slide-XX.png` and `reel.mp4` to `carousels/<slug>/` (drop `carousel.html` and the `reel/` frames folder) and send both to the user.
 
 ## Publishing
-Only schedule when asked. Metricool cannot attach music to an image carousel — music only works on Reels. If he wants a song, either schedule with `autoPublish: false` so he adds it in the Instagram app, or offer a Reel slideshow version.
+Only schedule when asked. He prefers to post himself and add music in Instagram — don't schedule unless he asks. If he does: Metricool can't attach music to an image carousel; for the reel it can (`instagramData.type: REEL` + `audioConfiguration.audioId`, Business account only).

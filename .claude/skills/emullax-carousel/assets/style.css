@@ -90,3 +90,9 @@ em{color:#93F9FF;font-weight:700}
 .dots i{background:rgba(87,161,239,.25)}.dots i.on{background:linear-gradient(90deg,#57A1EF,#93F9FF)}
 .disc{border-color:rgba(87,161,239,.5)}
 .vs{border-color:rgba(87,161,239,.3);color:#93F9FF}
+/* Reel (9:16) variant — Instagram UI safe areas: ~200px top, ~380px bottom */
+body.reel .slide{height:1920px;padding:150px 76px 0}
+body.reel .ftr{margin-bottom:300px}
+body.reel main{gap:44px}
+body.reel .aura{top:-260px;height:1100px}
+body.reel .bgc{bottom:420px}
