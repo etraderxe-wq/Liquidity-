@@ -18,11 +18,11 @@ Every carousel for @emullax uses this one look. Do not switch to the gold daily-
 1. Keep the user's text **verbatim**. Only add short design labels (cover meta, section titles for split slides, "اسحب للتفاصيل") and say which ones you added.
 2. Write a content JSON like `examples/financial-literacy.json`:
    - `kind: "cover"` → title, subtitle, optional `meta` (3 pairs).
-   - Section slides → `num` (int → Arabic digits), `title`, `blocks`, optional `dense: true` for list-heavy slides.
+   - Section slides → `title`, `blocks`, optional `dense: true` for list-heavy slides. The number badge is automatically the slide's own page number in **English digits** (same as the footer), so numbers never repeat; `"num": false` hides it.
    - `kind: "outro"` → closing line (`title`), `subtitle`, `disclaimer` (always include one for trading/finance content).
    - Block types: `lead`, `body`, `muted`, `highlight`, `quote`, `steps`, `bullets` (items `{title,text}`), `checklist`, `pros_cons` (`good`/`bad`, `vertical`, `between`), `chips`, `grid`, `next`.
    - Wrap emphasis in `<em>…</em>` (renders cyan).
-   - Roughly one idea per slide; split long sections across 2 slides with the same `num`. Max 20 slides (Instagram limit).
+   - Roughly one idea per slide; split long sections across 2 slides. Max 20 slides (Instagram limit).
 3. Build and render:
    ```bash
    python3 .claude/skills/emullax-carousel/scripts/build.py content.json carousels/<slug>
@@ -35,7 +35,7 @@ Every carousel for @emullax uses this one look. Do not switch to the gold daily-
    ```
    The reel is the same slides in 9:16 (header/footer kept clear of Instagram's UI), each held 3.5–7 s by word count, slow push-in, 0.5 s fades, 30 fps, **no audio** — he adds the music himself in Instagram.
    `render.js` reports any OVERFLOW (exit 1). Fix by splitting the slide or setting `dense` — never by shrinking fonts below the stylesheet sizes.
-4. Look at every PNG yourself (or a contact sheet): Arabic joined, nothing clipped, logo crisp. For the reel, pull 3–4 frames with `ffmpeg -ss T -i reel.mp4 -frames:v 1` and check duration with ffprobe.
+4. All numbers on slides are English digits (1 2 3), never Arabic-Indic (١ ٢ ٣). Look at every PNG yourself (or a contact sheet): Arabic joined, nothing clipped, logo crisp. For the reel, pull 3–4 frames with `ffmpeg -ss T -i reel.mp4 -frames:v 1` and check duration with ffprobe.
 5. Commit `slide-XX.png` and `reel.mp4` to `carousels/<slug>/` (drop `carousel.html` and the `reel/` frames folder) and send both to the user.
 
 ## Publishing

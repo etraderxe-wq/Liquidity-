@@ -4,7 +4,6 @@ import json, random, sys, html
 from pathlib import Path
 
 SKILL = Path(__file__).resolve().parent.parent
-ARABIC_NUM = "٠١٢٣٤٥٦٧٨٩"
 
 def candles(W=1080, H=520, n=40, seed=3, col="#57A1EF"):
     r = random.Random(seed); p = 50.0; step = W / n
@@ -66,8 +65,8 @@ def main(src, out_dir):
                     + (f'<div class="disc">{s["disclaimer"]}</div>' if s.get("disclaimer") else "") + "</div>")
             cls = "cov"
         else:
-            num = s.get("num", "")
-            if isinstance(num, int): num = "".join(ARABIC_NUM[int(d)] for d in str(num))
+            # badge = slide number (matches the "i / N" footer), English digits
+            num = "" if s.get("num") is False else str(i)
             body = (f'<div class="sec"><span class="num">{num}</span><h2>{s["title"]}</h2></div>' if num else f"<h2>{s['title']}</h2>")
             body += "".join(block(b) for b in s.get("blocks", []))
             cls = "dense" if s.get("dense") else ""
