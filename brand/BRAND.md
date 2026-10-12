@@ -28,10 +28,12 @@
 ## الخطوط
 | الاستخدام | الخط الرسمي | البديل المجاني (لين ما توصل ملفات الخط الأصلي) |
 |---|---|---|
-| عناوين عربية | RTL-Maghfira Ramadan | Alexandria |
+| عناوين عربية | RTL-Maghfira Ramadan | Tajawal |
 | نصوص عربية | Aktiv Grotesk Regular | IBM Plex Sans Arabic |
 | عناوين إنجليزية | Panchang Semibold | Michroma |
 | نصوص إنجليزية | Cabinet Grotesk Regular | IBM Plex Sans |
+
+⚠️ لا تستخدم Alexandria ولا Cairo للعربي: الاثنين يكتبون الياء الأخيرة بدون نقاط (أسلوب مصري)، فتنقرا «في» «فى» و«المالي» «المالى».
 
 الخطوط البديلة مضمّنة في `.claude/skills/emullax-carousel/assets/fonts/`. إذا وصلت ملفات الخطوط الأصلية، تنحط في `brand/fonts/` وتصير هي المعتمدة.
 

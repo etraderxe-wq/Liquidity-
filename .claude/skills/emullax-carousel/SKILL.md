@@ -11,7 +11,8 @@ Every carousel for @emullax uses this one look. Do not switch to the gold daily-
 - Colors: `#00051A` background · `#030B24` cards · `#FCFCFC` text · `#3977D5` / `#57A1EF` blue accents · `#93F9FF` cyan highlight. Cyan→blue glow aura at the top.
 - Logo: `assets/logo.png` (white). Keep clear space around it; never recolor or stretch.
 - Fonts in the guide are licensed and not bundled, so free substitutes are embedded in `assets/fonts/`:
-  Arabic headings Maghfira → **Alexandria** · Arabic body Aktiv Grotesk → **IBM Plex Sans Arabic** · English headings Panchang → **Michroma**.
+  Arabic headings Maghfira → **Tajawal** · Arabic body Aktiv Grotesk → **IBM Plex Sans Arabic** · English headings Panchang → **Michroma**.
+  Never use Alexandria or Cairo for Arabic: both draw final ي without dots (Egyptian style), so «في» reads «فى».
   If the user supplies the real font files, add `@font-face` rules to `assets/fonts.css` and swap the family names in `assets/style.css`.
 
 ## Steps

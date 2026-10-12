@@ -50,6 +50,11 @@
   "gain": 0.45
  },
  {
+  "type": "swoosh-pass",
+  "at": "scene:s9",
+  "gain": 0.45
+ },
+ {
   "type": "tick",
   "at": 6.65,
   "gain": 0.3
@@ -113,5 +118,20 @@
   "type": "shimmer",
   "at": 56.6,
   "gain": 0.45
+ },
+ {
+  "type": "pop",
+  "at": 61.0,
+  "gain": 0.5
+ },
+ {
+  "type": "shimmer",
+  "at": 61.7,
+  "gain": 0.4
+ },
+ {
+  "type": "pop",
+  "at": 64.3,
+  "gain": 0.5
  }
 ]

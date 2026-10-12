@@ -6,7 +6,7 @@ const dir=reel?path.join(out,'reel'):out;fs.mkdirSync(dir,{recursive:true});
 const b=await chromium.launch();const p=await b.newPage({viewport:{width:1080,height:H}});
 await p.goto('file://'+out+'/carousel.html',{waitUntil:'networkidle'});if(reel)await p.evaluate(()=>document.body.classList.add('reel'));
 await p.evaluate(()=>document.fonts.ready);
-const ok=await p.evaluate(()=>document.fonts.check('700 40px Alexandria','ث')&&document.fonts.check('400 30px "IBM Plex Sans Arabic"','ث'));if(!ok)console.log('WARNING: brand fonts not loaded');
+const ok=await p.evaluate(()=>document.fonts.check('900 40px Tajawal','ث')&&document.fonts.check('400 30px "IBM Plex Sans Arabic"','ث'));if(!ok)console.log('WARNING: brand fonts not loaded');
 const n=await p.$$eval('.slide',s=>s.length);let bad=0;const words=[];
 for(let i=1;i<=n;i++){const el=await p.$('#s'+i);const o=await el.$eval('main',m=>[m.scrollHeight,m.clientHeight]);
 if(o[0]>o[1]){bad++;console.log(`OVERFLOW slide ${i}: ${o[0]}>${o[1]} — split the slide or shorten text`)}

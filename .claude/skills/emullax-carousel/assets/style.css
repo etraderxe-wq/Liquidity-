@@ -61,7 +61,7 @@ main{gap:30px}
 .tri .card{padding:20px 36px}
 .lead{line-height:1.7}
 /* EMULLAX brand guide: #00051A #030B24 #FCFCFC #3977D5 #57A1EF #93F9FF
-   Arabic headings: Maghfira (sub: Alexandria) · Arabic body: Aktiv Grotesk (sub: IBM Plex Sans Arabic) · EN heading: Panchang (sub: Michroma) */
+   Arabic headings: Maghfira (sub: Tajawal — Alexandria dropped: dotless final ي) · Arabic body: Aktiv Grotesk (sub: IBM Plex Sans Arabic) · EN heading: Panchang (sub: Michroma) */
 body{font-family:"IBM Plex Sans Arabic",sans-serif}
 .slide{background:#00051A;color:#FCFCFC;font-family:"IBM Plex Sans Arabic",sans-serif}
 .aura{position:absolute;top:-420px;left:-200px;right:-200px;height:900px;pointer-events:none;
@@ -69,7 +69,7 @@ body{font-family:"IBM Plex Sans Arabic",sans-serif}
 .cov .aura{top:-300px;height:1000px}
 .vig{display:none}
 .bgc{opacity:.45}.cov .bgc{opacity:.8}
-h1,h2,.o1,.sec .num,.tri b,.item b,.scn b,.g4 .card,.meta b,.chips span,.hlb.big,.cover .hl{font-family:Alexandria,sans-serif}
+h1,h2,.o1,.sec .num,.tri b,.item b,.scn b,.g4 .card,.meta b,.chips span,.hlb.big,.cover .hl{font-family:Tajawal,sans-serif}
 h1{font-weight:800;font-size:128px;line-height:1.3;color:#FCFCFC}
 h2{font-weight:700;font-size:52px;line-height:1.45;color:#FCFCFC}
 .lead{font-weight:500;color:#FCFCFC}
@@ -81,7 +81,7 @@ h2{font-weight:700;font-size:52px;line-height:1.45;color:#FCFCFC}
 em{color:#93F9FF;font-weight:700}
 .item b,.g4 .card,.tri span,.nx,.swipe,.ftr .h{color:#57A1EF}
 .chips span{color:#93F9FF;border-color:#57A1EF}
-.num{border:none;color:#FCFCFC;background:linear-gradient(140deg,#93F9FF,#57A1EF 45%,#3977D5);color:#00051A;font-family:Alexandria;font-weight:800}
+.num{border:none;color:#FCFCFC;background:linear-gradient(140deg,#93F9FF,#57A1EF 45%,#3977D5);color:#00051A;font-family:Tajawal;font-weight:900}
 .ic{border-color:#57A1EF;color:#93F9FF}
 .card,.meta div{background:#030B24!important;border:1px solid rgba(87,161,239,.22)}
 .hlb,.cover .hl{background:#030B24!important;border:1px solid rgba(87,161,239,.22);border-right:5px solid #57A1EF!important;border-radius:16px;color:#FCFCFC}
@@ -96,3 +96,11 @@ body.reel .ftr{margin-bottom:300px}
 body.reel main{gap:44px}
 body.reel .aura{top:-260px;height:1100px}
 body.reel .bgc{bottom:420px}
+/* brand rule (brand/BRAND.md): navy top → blue bottom, cyan glow bottom-left; cards rgba(0,5,26,.82) */
+.slide{background:radial-gradient(ellipse 80% 38% at 0% 100%,#93F9FF 0%,rgba(87,161,239,.85) 38%,rgba(61,126,225,0) 75%),linear-gradient(172deg,#00051A 0%,#00051A 30%,#08163D 50%,#1F4590 72%,#3D7EE1 100%)!important}
+.aura{opacity:.55}
+.bgc{opacity:.25!important}
+.card,.meta div,.hlb,.cover .hl{background:rgba(0,5,26,.82)!important;backdrop-filter:blur(8px)}
+.ftr{border-color:rgba(147,249,255,.22)}
+.ftr,.hdr .rt{color:#C9D6F0!important}
+.ftr .h{color:#FCFCFC!important}

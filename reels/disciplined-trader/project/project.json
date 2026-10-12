@@ -17,8 +17,8 @@
   "clay": "#3977D5"
  },
  "fonts": {
-  "display": "Cairo",
-  "body": "Cairo",
+  "display": "Tajawal",
+  "body": "Tajawal",
   "num": "Inter"
  },
  "images": {
@@ -141,6 +141,16 @@
     "dur": 0.8,
     "ease": "expoInOut",
     "color": "#00051A"
+   }
+  },
+  {
+   "id": "s9",
+   "file": "scenes/s9.js",
+   "lines": [],
+   "transition": {
+    "type": "crossfade",
+    "dur": 0.6,
+    "ease": "expoInOut"
    }
   }
  ]

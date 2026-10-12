@@ -2,7 +2,7 @@
  "fps": 30,
  "width": 1080,
  "height": 1920,
- "duration": 60.0,
+ "duration": 67.0,
  "bpm": 92,
  "beatsPerBar": 4,
  "beatOffset": 0,
@@ -100,7 +100,17 @@
   58.043,
   58.696,
   59.348,
-  60.0
+  60.0,
+  60.652,
+  61.304,
+  61.957,
+  62.609,
+  63.261,
+  63.913,
+  64.565,
+  65.217,
+  65.87,
+  66.522
  ],
  "bars": [
   0.0,
@@ -126,7 +136,9 @@
   52.174,
   54.783,
   57.391,
-  60.0
+  60.0,
+  62.609,
+  65.217
  ],
  "sections": [
   {
@@ -142,7 +154,7 @@
   {
    "name": "outro",
    "start": 50,
-   "end": 60.0
+   "end": 67.0
   }
  ],
  "scenes": [
@@ -252,13 +264,25 @@
    "id": "s8",
    "file": "scenes/s8.js",
    "start": 56,
-   "end": 60.0,
+   "end": 60,
    "lines": [],
    "transition": {
     "type": "dip",
     "dur": 0.8,
     "ease": "expoInOut",
     "color": "#00051A"
+   }
+  },
+  {
+   "id": "s9",
+   "file": "scenes/s9.js",
+   "start": 60,
+   "end": 67.0,
+   "lines": [],
+   "transition": {
+    "type": "crossfade",
+    "dur": 0.6,
+    "ease": "expoInOut"
    }
   }
  ],

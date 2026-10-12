@@ -1,5 +1,5 @@
 // Shared look for «5 قوانين قاسية للنجاح» — EMULLAX brand (#00051A bg, #57A1EF accent).
-export const FD = 'Cairo', FB = 'Cairo', FN = 'Inter';
+export const FD = 'Tajawal', FB = 'Tajawal', FN = 'Inter';   // Cairo's bundled build draws final ي dotless
 
 export function rrect(X, x, y, w, h, r) {
   X.beginPath(); X.moveTo(x + r, y); X.arcTo(x + w, y, x + w, y + h, r); X.arcTo(x + w, y + h, x, y + h, r);
