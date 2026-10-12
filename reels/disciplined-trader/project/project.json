@@ -1,0 +1,147 @@
+{
+ "name": "5 قواعد للمتداول المنضبط",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "bpm": 92,
+ "beatsPerBar": 4,
+ "beatOffset": 0,
+ "palette": {
+  "bg": "#00051A",
+  "card": "rgba(0,5,26,.82)",
+  "ink": "#FCFCFC",
+  "acc": "#57A1EF",
+  "acc2": "#3977D5",
+  "hi": "#93F9FF",
+  "mut": "#A9B6D3",
+  "clay": "#3977D5"
+ },
+ "fonts": {
+  "display": "Cairo",
+  "body": "Cairo",
+  "num": "Inter"
+ },
+ "images": {
+  "logo": "assets/logo.png"
+ },
+ "post": {
+  "grain": 0.04,
+  "vignette": 0.18
+ },
+ "music": {
+  "key": "E",
+  "scale": "minor",
+  "progression": [
+   0,
+   5,
+   3,
+   4
+  ],
+  "level": -12,
+  "duck": -6,
+  "top": {
+   "hat": 9,
+   "pluck": 1
+  }
+ },
+ "scenes": [
+  {
+   "id": "s1",
+   "file": "scenes/s1.js",
+   "lines": [
+    "l1"
+   ]
+  },
+  {
+   "id": "s2",
+   "file": "scenes/s2.js",
+   "lines": [
+    "l2"
+   ],
+   "transition": {
+    "type": "push",
+    "dur": 0.5,
+    "ease": "expoInOut",
+    "dir": "up"
+   }
+  },
+  {
+   "id": "s3",
+   "file": "scenes/s3.js",
+   "lines": [
+    "l3"
+   ],
+   "transition": {
+    "type": "wipe",
+    "dur": 0.5,
+    "ease": "expoInOut",
+    "dir": "rtl"
+   }
+  },
+  {
+   "id": "s4",
+   "file": "scenes/s4.js",
+   "lines": [
+    "l4"
+   ],
+   "transition": {
+    "type": "iris",
+    "dur": 0.6,
+    "ease": "expoInOut",
+    "at": [
+     540,
+     900
+    ]
+   }
+  },
+  {
+   "id": "s5",
+   "file": "scenes/s5.js",
+   "lines": [
+    "l5"
+   ],
+   "transition": {
+    "type": "crossfade",
+    "dur": 0.6,
+    "ease": "expoInOut"
+   }
+  },
+  {
+   "id": "s6",
+   "file": "scenes/s6.js",
+   "lines": [
+    "l6"
+   ],
+   "transition": {
+    "type": "push",
+    "dur": 0.5,
+    "ease": "expoInOut",
+    "dir": "left"
+   }
+  },
+  {
+   "id": "s7",
+   "file": "scenes/s7.js",
+   "lines": [
+    "l7"
+   ],
+   "transition": {
+    "type": "wipe",
+    "dur": 0.5,
+    "ease": "expoInOut",
+    "dir": "up"
+   }
+  },
+  {
+   "id": "s8",
+   "file": "scenes/s8.js",
+   "lines": [],
+   "transition": {
+    "type": "dip",
+    "dur": 0.8,
+    "ease": "expoInOut",
+    "color": "#00051A"
+   }
+  }
+ ]
+}

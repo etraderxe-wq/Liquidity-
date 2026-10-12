@@ -1,0 +1,112 @@
+[
+ {
+  "type": "pop",
+  "at": 0.08,
+  "gain": 0.55
+ },
+ {
+  "type": "reverse-whoosh",
+  "at": 2.45,
+  "gain": 0.55
+ },
+ {
+  "type": "impact",
+  "at": 2.45,
+  "gain": 0.85
+ },
+ {
+  "type": "shimmer",
+  "at": 8.486,
+  "gain": 0.4
+ },
+ {
+  "type": "impact",
+  "at": 19.31,
+  "gain": 0.6
+ },
+ {
+  "type": "shimmer",
+  "at": 29.279999999999998,
+  "gain": 0.4
+ },
+ {
+  "type": "glitch",
+  "at": 36.178,
+  "gain": 0.5
+ },
+ {
+  "type": "pop",
+  "at": 39.021,
+  "gain": 0.6
+ },
+ {
+  "type": "tick",
+  "at": 40.021,
+  "gain": 0.5
+ },
+ {
+  "type": "slide",
+  "at": 45.550000000000004,
+  "gain": 0.5
+ },
+ {
+  "type": "tick",
+  "at": 53.8,
+  "gain": 0.45
+ },
+ {
+  "type": "shimmer",
+  "at": 57.6,
+  "gain": 0.5
+ },
+ {
+  "type": "tick",
+  "at": 6.4,
+  "gain": 0.28
+ },
+ {
+  "type": "tick",
+  "at": 7.25,
+  "gain": 0.28
+ },
+ {
+  "type": "tick",
+  "at": 8.100000000000001,
+  "gain": 0.28
+ },
+ {
+  "type": "tick",
+  "at": 8.95,
+  "gain": 0.28
+ },
+ {
+  "type": "swoosh-pass",
+  "at": "scene:s2",
+  "gain": 0.55
+ },
+ {
+  "type": "swoosh-pass",
+  "at": "scene:s3",
+  "gain": 0.55
+ },
+ {
+  "type": "swoosh-pass",
+  "at": "scene:s4",
+  "gain": 0.55
+ },
+ {
+  "type": "swoosh-pass",
+  "at": "scene:s5",
+  "gain": 0.55
+ },
+ {
+  "type": "swoosh-pass",
+  "at": "scene:s6",
+  "gain": 0.55
+ },
+ {
+  "type": "swoosh-pass",
+  "at": "scene:s7",
+  "gain": 0.55
+ }
+]

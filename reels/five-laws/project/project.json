@@ -1,0 +1,139 @@
+{
+ "name": "5 قوانين قاسية للنجاح",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "bpm": 100,
+ "beatsPerBar": 4,
+ "beatOffset": 0,
+ "palette": {
+  "bg": "#00051A",
+  "card": "rgba(0,5,26,.82)",
+  "ink": "#FCFCFC",
+  "acc": "#57A1EF",
+  "acc2": "#3977D5",
+  "hi": "#93F9FF",
+  "mut": "#8C9AB8",
+  "clay": "#3977D5"
+ },
+ "fonts": {
+  "display": "Alexandria",
+  "body": "IBM Plex Sans Arabic",
+  "num": "Inter"
+ },
+ "extraFonts": [
+  {
+   "family": "Alexandria",
+   "file": "assets/Alexandria-ar.woff2",
+   "weight": "500 900"
+  }
+ ],
+ "images": {
+  "logo": "assets/logo.png"
+ },
+ "post": {
+  "grain": 0.045,
+  "vignette": 0.22
+ },
+ "music": {
+  "key": "D",
+  "scale": "minor",
+  "progression": [
+   0,
+   5,
+   3,
+   4
+  ],
+  "level": -9,
+  "duck": -5,
+  "top": {
+   "hat": 12,
+   "pluck": 2
+  }
+ },
+ "scenes": [
+  {
+   "id": "s1",
+   "file": "scenes/s1.js",
+   "lines": [
+    "l1"
+   ]
+  },
+  {
+   "id": "s2",
+   "file": "scenes/s2.js",
+   "lines": [
+    "l2"
+   ],
+   "transition": {
+    "type": "push",
+    "dur": 0.5,
+    "dir": "up",
+    "ease": "expoInOut"
+   }
+  },
+  {
+   "id": "s3",
+   "file": "scenes/s3.js",
+   "lines": [
+    "l3"
+   ],
+   "transition": {
+    "type": "wipe",
+    "dur": 0.5,
+    "dir": "rtl",
+    "ease": "expoInOut"
+   }
+  },
+  {
+   "id": "s4",
+   "file": "scenes/s4.js",
+   "lines": [
+    "l4"
+   ],
+   "transition": {
+    "type": "iris",
+    "dur": 0.6,
+    "at": [
+     540,
+     900
+    ]
+   }
+  },
+  {
+   "id": "s5",
+   "file": "scenes/s5.js",
+   "lines": [
+    "l5"
+   ],
+   "transition": {
+    "type": "zoom",
+    "dur": 0.5
+   }
+  },
+  {
+   "id": "s6",
+   "file": "scenes/s6.js",
+   "lines": [
+    "l6"
+   ],
+   "transition": {
+    "type": "blinds",
+    "dur": 0.6,
+    "n": 7
+   }
+  },
+  {
+   "id": "s7",
+   "file": "scenes/s7.js",
+   "lines": [
+    "l7"
+   ],
+   "transition": {
+    "type": "dip",
+    "dur": 0.6,
+    "color": "#00051A"
+   }
+  }
+ ]
+}
