@@ -20,6 +20,7 @@ def brand_bg():
     a, c = glow(r); img = img * (1 - a) + c * a
     return img / 255.
 BG = brand_bg()
+ORANGE = (0x93 / 255, 0xF9 / 255, 0xFF / 255)   # orange accent → brand cyan #93F9FF (user request)
 LOGO = Image.open('/home/user/Liquidity-/brand/logo-gradient.png').convert('RGBA')
 lw = 200; LOGO = LOGO.resize((lw, int(LOGO.height * lw / LOGO.width)), Image.LANCZOS)
 L = np.asarray(LOGO).astype(np.float32) / 255.; LY, LX = 158, (Wd - lw) // 2
@@ -32,7 +33,13 @@ def rebrand(fr, logo_a=1.0):
     col = ink / np.maximum(mx[..., None], 1e-3)                                  # full-brightness hue
     col = col * .92 + .08                                                         # lift for dark background
     out_ink = np.where(grey[..., None], np.array([.988, .988, .988]), col)
+    if ORANGE is not None:                                                        # orange (R high, G mid, B low) → requested colour
+        r_, g_, b_ = ink[..., 0], ink[..., 1], ink[..., 2]
+        orange = (~grey) & (r_ >= g_) & (g_ > b_ + .08) & (g_ > r_ * .4) & (g_ < r_ * .85) & (r_ - b_ > .35)   # g/r ≈ .58 orange vs ≈ .26 red
+        out_ink = np.where(orange[..., None], np.array(ORANGE), out_ink)
+        a2_or = True
     a2 = np.where(grey, a, np.clip(a * 1.6, 0, 1))
+    if ORANGE is not None: a2 = np.where(orange, np.clip(a * 1.25, 0, 1), a2)
     o = BG * (1 - a2[..., None]) + out_ink * a2[..., None]
     la = L[..., 3:] * logo_a; reg = o[LY:LY + L.shape[0], LX:LX + lw]; o[LY:LY + L.shape[0], LX:LX + lw] = reg * (1 - la) + L[..., :3] * la
     return (o * 255 + .5).astype(np.uint8)

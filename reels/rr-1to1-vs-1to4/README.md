@@ -1,6 +1,6 @@
 # 1:1 vs 1:4 — Arabic version
 
-- `rr-1to1-vs-1to4-ar.mp4`: 1080×1920, 30 fps, 41 s (35 s explainer + 6.4 s cashback end card). Every English text element is covered and redrawn in Arabic (Tajawal) with the original per-frame fade; then `project/rebrand.py` lifts the graphics off the white background (colour-to-alpha: greys → white, colours brightened) and places them on the EMULLAX Instagram gradient with the gradient logo (brand/BRAND.md).
+- `rr-1to1-vs-1to4-ar.mp4`: 1080×1920, 30 fps, 41 s (35 s explainer + 6.4 s cashback end card). Every English text element is covered and redrawn in Arabic (Tajawal) with the original per-frame fade; then `project/rebrand.py` lifts the graphics off the white background (colour-to-alpha: greys → white, colours brightened, the original orange accent → brand cyan #93F9FF) and places them on the EMULLAX Instagram gradient with the gradient logo (brand/BRAND.md).
 - Audio: a newly generated music bed + light sound effects (-14 LUFS). **No voice yet**: the English narration could not be separated from the original music, and the Arabic TTS / transcription services were blocked in the build environment.
 - `rr-1to1-vs-1to4-ar.srt`: Arabic subtitles of the proposed voiceover, timed to the scenes.
 - `voiceover-timing.md`: recording sheet.
