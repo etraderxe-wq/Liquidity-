@@ -1,0 +1,140 @@
+{
+ "name": "ICT London Open Model",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "bpm": 84,
+ "palette": {
+  "bg": "#00051A",
+  "card": "rgba(0,5,26,.82)",
+  "ink": "#FCFCFC",
+  "acc": "#57A1EF",
+  "acc2": "#3977D5",
+  "hi": "#93F9FF",
+  "mut": "#A9B6D3",
+  "clay": "#3977D5"
+ },
+ "fonts": {
+  "display": "Tajawal",
+  "body": "Tajawal",
+  "num": "Inter"
+ },
+ "images": {
+  "logo": "assets/logo.png"
+ },
+ "post": {
+  "grain": 0.035,
+  "vignette": 0.2
+ },
+ "music": {
+  "key": "D",
+  "scale": "minor",
+  "progression": [
+   0,
+   5,
+   3,
+   4
+  ],
+  "level": -12,
+  "duck": -6,
+  "top": {
+   "hat": 8,
+   "pluck": 1
+  }
+ },
+ "scenes": [
+  {
+   "id": "s1",
+   "file": "scenes/s1.js",
+   "lines": [
+    "l1"
+   ]
+  },
+  {
+   "id": "s2",
+   "file": "scenes/s2.js",
+   "lines": [
+    "l2"
+   ],
+   "transition": {
+    "type": "crossfade",
+    "dur": 0.8
+   }
+  },
+  {
+   "id": "s3",
+   "file": "scenes/s3.js",
+   "lines": [
+    "l3"
+   ],
+   "transition": {
+    "type": "wipe",
+    "dur": 0.6,
+    "dir": "rtl",
+    "ease": "expoInOut"
+   }
+  },
+  {
+   "id": "s4",
+   "file": "scenes/s4.js",
+   "lines": [
+    "l4"
+   ],
+   "transition": {
+    "type": "push",
+    "dur": 0.6,
+    "dir": "up",
+    "ease": "expoInOut"
+   }
+  },
+  {
+   "id": "s5",
+   "file": "scenes/s5.js",
+   "lines": [
+    "l5"
+   ],
+   "transition": {
+    "type": "wipe",
+    "dur": 0.6,
+    "dir": "ltr",
+    "ease": "expoInOut"
+   }
+  },
+  {
+   "id": "s6",
+   "file": "scenes/s6.js",
+   "lines": [
+    "l6"
+   ],
+   "transition": {
+    "type": "push",
+    "dur": 0.6,
+    "dir": "up",
+    "ease": "expoInOut"
+   }
+  },
+  {
+   "id": "s7",
+   "file": "scenes/s7.js",
+   "lines": [
+    "l7"
+   ],
+   "transition": {
+    "type": "zoom",
+    "dur": 0.6
+   }
+  },
+  {
+   "id": "s8",
+   "file": "scenes/s8.js",
+   "lines": [
+    "l8"
+   ],
+   "transition": {
+    "type": "dip",
+    "dur": 0.8,
+    "color": "#00051A"
+   }
+  }
+ ]
+}
