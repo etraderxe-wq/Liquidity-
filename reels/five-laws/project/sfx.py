@@ -13,5 +13,5 @@ fx = [{"type": "pop", "at": 0.08, "gain": .55},
       {"type": "tick", "at": 53.8, "gain": .45},
       {"type": "shimmer", "at": 57.6, "gain": .5}]
 fx += [{"type": "tick", "at": 5 + .9 + i * .85 + .5, "gain": .28} for i in range(4)]
-fx += [{"type": "swoosh-pass", "at": f"scene:s{i}", "gain": .55} for i in range(2, 8)]
+fx += [{"type": "swoosh-pass", "at": f"scene:s{i}", "gain": .55} for i in range(2, 9)]
 json.dump(fx, open('sfx.json', 'w'), indent=1); print(len(fx), 'sfx')

@@ -17,17 +17,10 @@
   "clay": "#3977D5"
  },
  "fonts": {
-  "display": "Alexandria",
+  "display": "Tajawal",
   "body": "IBM Plex Sans Arabic",
   "num": "Inter"
  },
- "extraFonts": [
-  {
-   "family": "Alexandria",
-   "file": "assets/Alexandria-ar.woff2",
-   "weight": "500 900"
-  }
- ],
  "images": {
   "logo": "assets/logo.png"
  },
@@ -133,6 +126,15 @@
     "type": "dip",
     "dur": 0.6,
     "color": "#00051A"
+   }
+  },
+  {
+   "id": "s8",
+   "file": "scenes/s8.js",
+   "lines": [],
+   "transition": {
+    "type": "crossfade",
+    "dur": 0.6
    }
   }
  ]

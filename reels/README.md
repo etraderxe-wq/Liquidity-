@@ -24,6 +24,6 @@ ffmpeg -i renders/final.mp4 -c:v libx264 -crf 21 -af "afade=t=out:st=<dur-2>:d=2
 On Linux as root, add `--no-sandbox` to the Chromium launch args in `render.js`.
 
 ## Adding the voiceover
-The current videos have music + sound effects only (no voice: the TTS service was blocked in the build environment).
+The current videos have music + sound effects only (no voice: the TTS service was blocked in the build environment). Both end with a cashback card (60% of the partner commission on eligible trades). Arabic headings use Tajawal — not Alexandria/Cairo, which draw final ي dotless.
 With a recording: `python3 voice.py <project> --own voice.wav` (word timing via whisper), then `timeline.py`, `render.js all --fresh`, `audio.py`.
 Without whisper, keep each line inside its scene window (see `voiceover-script.md`) and mix it over the MP4.

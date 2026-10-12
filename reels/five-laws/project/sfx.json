@@ -108,5 +108,10 @@
   "type": "swoosh-pass",
   "at": "scene:s7",
   "gain": 0.55
+ },
+ {
+  "type": "swoosh-pass",
+  "at": "scene:s8",
+  "gain": 0.55
  }
 ]
