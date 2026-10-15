@@ -1,0 +1,22 @@
+.cover h1{font-size:82px}.cover h1 span{color:#FF8A95;text-shadow:0 0 30px rgba(255,92,108,.4)}
+.sl main{gap:26px}
+h2{font-size:60px}
+.pts{list-style:none;display:grid;gap:14px}
+.pts li{font-size:36px;font-weight:700;line-height:1.45;padding:18px 24px;background:rgba(0,5,26,.75);border:1px solid rgba(87,161,239,.3);border-radius:18px;display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+.pts li::before{content:"◆";color:#93F9FF;font-size:24px}
+.tag{font-style:normal;font-size:20px;font-weight:800;padding:3px 12px;border-radius:999px;border:1.5px solid #FFB020;color:#FFB020;margin-inline-start:auto}
+.cards{display:grid;gap:16px}.card{background:rgba(0,5,26,.78);border:1px solid rgba(87,161,239,.32);border-radius:20px;padding:20px 26px}
+.card b{display:flex;align-items:center;gap:12px;font-size:36px;font-weight:900;color:#93F9FF}.card p{font-size:32px;font-weight:600;line-height:1.5;margin-top:6px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.mk .mh{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.mk .e{font-size:34px}.mk b{font-family:Inter,Tajawal;font-size:24px;font-weight:800;color:#93F9FF}.mk i{font-style:normal;font-size:28px;font-weight:900}
+.mk .arr{margin-inline-start:auto;color:#C9D6F0;font-size:30px}.mk p{font-size:27px;line-height:1.5}
+.note{text-align:center;font-size:24px;color:#C9D6F0}
+.end main{align-items:center;text-align:center;gap:20px}.endbg{position:absolute;inset:auto 0 0 0;background:none;border:none;opacity:.6}
+.oh{font-size:58px;line-height:1.35}.oh span{color:#93F9FF}.sub.c{border:none;padding:0;font-size:32px}
+.follow{font-family:Michroma;font-size:30px;letter-spacing:3px;padding:16px 34px;border-radius:999px;background:linear-gradient(135deg,#93F9FF,#57A1EF,#3977D5);color:#00051A}
+.lg{font-size:34px;font-weight:900}.tl{font-family:Inter;font-weight:700;font-size:28px;color:#C9D6F0}
+.tag.ok{border-color:#3DDC97;color:#3DDC97}
+.tl,.mk b{font-family:Michroma,Tajawal!important;font-weight:400!important}
+.tl{font-size:22px;letter-spacing:1px}
+.mk p{font-size:30px}.mk i{font-size:32px}.grid .card{padding:22px 22px}
+.note{font-size:26px}
