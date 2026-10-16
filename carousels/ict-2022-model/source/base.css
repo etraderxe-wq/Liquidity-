@@ -1,0 +1,47 @@
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--H:1350px}
+body{background:#000;font-family:Tajawal,"Noto Color Emoji",sans-serif;color:#FCFCFC}
+.pg{width:1080px;height:var(--H);position:relative;overflow:hidden;display:flex;flex-direction:column;padding:0 64px;
+  background:radial-gradient(ellipse 80% 34% at 0% 100%,rgba(147,249,255,.5) 0%,rgba(87,161,239,.35) 40%,rgba(61,126,225,0) 75%),
+  linear-gradient(172deg,#00051A 0%,#00051A 36%,#06123A 58%,#14306E 82%,#2F63BE 100%)}
+.aura{position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.02) 0 2px,transparent 2px 6px);pointer-events:none}
+.hdr{height:118px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(87,161,239,.22);position:relative;z-index:2}
+.hdr img{height:62px}.hdr .no{font-family:Michroma;font-size:26px;color:#93F9FF;direction:ltr}
+main{flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px;position:relative;z-index:2;padding:14px 0}
+.ftr{height:70px;display:flex;align-items:center;justify-content:center;border-top:1px solid rgba(87,161,239,.22);z-index:2}
+.ftr span{font-family:Michroma;font-size:16px;letter-spacing:4px;color:#C9D6F0}
+.ttl{display:flex;flex-direction:column;gap:2px}
+.ttl .en{font-family:Michroma;font-size:24px;letter-spacing:4px;color:#93F9FF;align-self:flex-start}
+h2{font-size:58px;font-weight:900;line-height:1.25}
+.ill{background:rgba(0,5,26,.55);border:1px solid rgba(87,161,239,.25);border-radius:22px;padding:6px 10px}
+.sec h3{font-size:32px;font-weight:900;color:#93F9FF;margin-bottom:6px;display:flex;align-items:center;gap:12px}
+.sec h3::before{content:"";width:10px;height:30px;border-radius:5px;background:linear-gradient(#93F9FF,#3977D5)}
+.sec p{font-size:28px;line-height:1.55;color:#E3EAF6;font-weight:500}
+.fix ul{list-style:none;display:grid;gap:7px}
+.fix li{font-size:28px;font-weight:700;line-height:1.4;padding:8px 18px 8px 14px;background:rgba(0,5,26,.7);border:1px solid rgba(87,161,239,.28);border-radius:14px;display:flex;gap:12px;align-items:baseline}
+.fix li::before{content:"✓";color:#93F9FF;font-weight:900;font-size:28px}
+.quote{font-size:36px;font-weight:900;text-align:center;padding:18px 24px;border-radius:20px;background:linear-gradient(135deg,rgba(147,249,255,.18),rgba(57,119,213,.25));
+  border:2px solid rgba(147,249,255,.6);box-shadow:0 0 34px rgba(147,249,255,.2);line-height:1.45}
+/* cover */
+.cover main{justify-content:flex-start;gap:24px;padding-top:24px}
+.cover .ill{background:none;border:none;padding:0;margin:0 -30px}
+.cover h1{font-size:84px;font-weight:900;line-height:1.25;text-shadow:0 6px 30px rgba(0,0,0,.6)}
+.cover h1 .n{color:#93F9FF;font-family:Inter,Tajawal;font-size:110px;text-shadow:0 0 30px rgba(147,249,255,.5)}
+.cover .sub{font-size:36px;font-weight:700;color:#C9D6F0;border-right:6px solid #93F9FF;padding-right:20px;line-height:1.5}
+.brandline{font-family:Michroma;font-size:20px;letter-spacing:4px;color:#93F9FF;align-self:flex-start}
+.swipe{font-size:32px;font-weight:800;color:#93F9FF;align-self:flex-end;margin-top:auto}
+/* offer */
+.offer main{align-items:center;text-align:center;gap:16px}
+.biglogo{width:300px}
+.oh{font-size:56px;font-weight:900;line-height:1.3}
+.ex{font-family:Michroma;font-size:30px;letter-spacing:5px;color:#93F9FF}
+.pct{font-size:68px;font-weight:900;background:linear-gradient(90deg,#93F9FF,#57A1EF,#3977D5);-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 0 22px rgba(147,249,255,.35))}
+.perks{list-style:none;width:100%;display:grid;gap:9px;text-align:right}
+.perks li{font-size:30px;font-weight:700;padding:12px 22px;background:rgba(0,5,26,.75);border:1px solid rgba(87,161,239,.35);border-radius:16px;display:flex;gap:12px}
+.perks li::before{content:"✓";color:#93F9FF;font-weight:900}
+.cta{width:100%;padding:20px;border-radius:24px;background:linear-gradient(135deg,#93F9FF,#57A1EF 55%,#3977D5);color:#00051A;display:flex;flex-direction:column;gap:4px;box-shadow:0 0 40px rgba(87,161,239,.45)}
+.cta b{font-size:52px;font-weight:900}.cta span{font-size:40px;font-weight:900}.cta small{font-size:26px;font-weight:700}
+.handle{font-family:Inter;font-weight:800;font-size:36px}
+.disc{font-size:22px;color:#C9D6F0;line-height:1.5}
+/* 9:16 reel variant */
+.reel .pg{padding:150px 64px 300px}.reel .hdr{height:110px}
