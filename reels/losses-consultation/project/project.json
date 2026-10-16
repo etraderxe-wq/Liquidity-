@@ -1,0 +1,147 @@
+{
+ "name": "EMULLAX — Losses & Consultation",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "bpm": 80,
+ "palette": {
+  "bg": "#00051A",
+  "card": "rgba(0,5,26,.82)",
+  "ink": "#FCFCFC",
+  "acc": "#57A1EF",
+  "acc2": "#3977D5",
+  "hi": "#93F9FF",
+  "mut": "#A9B6D3",
+  "clay": "#3977D5"
+ },
+ "fonts": {
+  "display": "Tajawal",
+  "body": "Tajawal",
+  "num": "Inter"
+ },
+ "images": {
+  "logo": "assets/logo.png"
+ },
+ "extraFonts": [
+  {
+   "family": "Michroma",
+   "file": "assets/michroma.woff2",
+   "weight": "400"
+  }
+ ],
+ "post": {
+  "grain": 0.03,
+  "vignette": 0.28
+ },
+ "scenes": [
+  {
+   "id": "s1",
+   "file": "scenes/s1.js",
+   "lines": [
+    "l1"
+   ]
+  },
+  {
+   "id": "s2",
+   "file": "scenes/s2.js",
+   "lines": [
+    "l2",
+    "l3",
+    "l4"
+   ],
+   "transition": {
+    "type": "zoom",
+    "dur": 0.5
+   }
+  },
+  {
+   "id": "s3",
+   "file": "scenes/s3.js",
+   "lines": [
+    "l5",
+    "l6"
+   ],
+   "transition": {
+    "type": "glitch",
+    "dur": 0.45
+   }
+  },
+  {
+   "id": "s4",
+   "file": "scenes/s4.js",
+   "lines": [
+    "l7",
+    "l8"
+   ],
+   "transition": {
+    "type": "flash",
+    "dur": 0.4
+   }
+  },
+  {
+   "id": "s5",
+   "file": "scenes/s5.js",
+   "lines": [
+    "l9"
+   ],
+   "transition": {
+    "type": "push",
+    "dur": 0.6,
+    "dir": "up",
+    "ease": "expoInOut"
+   }
+  },
+  {
+   "id": "s6",
+   "file": "scenes/s6.js",
+   "lines": [
+    "l10"
+   ],
+   "transition": {
+    "type": "wipe",
+    "dur": 0.6,
+    "dir": "rtl",
+    "ease": "expoInOut"
+   }
+  },
+  {
+   "id": "s7",
+   "file": "scenes/s7.js",
+   "lines": [
+    "l11"
+   ],
+   "transition": {
+    "type": "zoom",
+    "dur": 0.5
+   }
+  },
+  {
+   "id": "s8",
+   "file": "scenes/s8.js",
+   "lines": [
+    "l12"
+   ],
+   "transition": {
+    "type": "push",
+    "dur": 0.6,
+    "dir": "up",
+    "ease": "expoInOut"
+   }
+  },
+  {
+   "id": "s9",
+   "file": "scenes/s9.js",
+   "lines": [],
+   "transition": {
+    "type": "dip",
+    "dur": 0.7,
+    "color": "#00051A"
+   }
+  },
+  {
+   "id": "subs",
+   "file": "scenes/subs-overlay.js",
+   "lines": []
+  }
+ ]
+}
