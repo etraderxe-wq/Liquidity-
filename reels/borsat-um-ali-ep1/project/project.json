@@ -1,0 +1,83 @@
+{
+ "name": "Borsat Um Ali — EP1",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "bpm": 100,
+ "palette": {
+  "bg": "#00051A",
+  "card": "rgba(0,5,26,.82)",
+  "ink": "#FCFCFC",
+  "acc": "#57A1EF",
+  "acc2": "#3977D5",
+  "hi": "#93F9FF",
+  "mut": "#A9B6D3",
+  "clay": "#3977D5"
+ },
+ "fonts": {
+  "display": "Tajawal",
+  "body": "Tajawal",
+  "num": "Inter"
+ },
+ "images": {
+  "logo": "assets/logo.png"
+ },
+ "extraFonts": [
+  {
+   "family": "Michroma",
+   "file": "assets/michroma.woff2",
+   "weight": "400"
+  }
+ ],
+ "post": {
+  "grain": 0.025,
+  "vignette": 0.3
+ },
+ "scenes": [
+  {
+   "id": "s1",
+   "file": "scenes/s1.js"
+  },
+  {
+   "id": "s2",
+   "file": "scenes/s2.js",
+   "transition": {
+    "type": "push",
+    "dur": 0.6,
+    "dir": "up",
+    "ease": "expoInOut"
+   }
+  },
+  {
+   "id": "s3",
+   "file": "scenes/s3.js",
+   "transition": {
+    "type": "zoom",
+    "dur": 0.5
+   }
+  },
+  {
+   "id": "s4",
+   "file": "scenes/s4.js",
+   "transition": {
+    "type": "wipe",
+    "dur": 0.6,
+    "dir": "rtl",
+    "ease": "expoInOut"
+   }
+  },
+  {
+   "id": "s5",
+   "file": "scenes/s5.js",
+   "transition": {
+    "type": "dip",
+    "dur": 0.8,
+    "color": "#000000"
+   }
+  },
+  {
+   "id": "subs",
+   "file": "scenes/subs-overlay.js"
+  }
+ ]
+}
