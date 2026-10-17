@@ -1,0 +1,12 @@
+import { bg, big, strike, UP, ACC, INK, MUT } from './lib.js';
+const NO = [[14.6, 'COWORKER'], [16.4, 'NEIGHBOR'], [17.8, 'STRANGER']];
+MOTION.scene({ id: 's3', draw(t, lt, ctx) { const { X, at } = ctx; bg(ctx, t);
+  const out1 = 14.05;
+  big(ctx, t, 'YOUR FEARS', 540, 640, 9.6, { size: 70, color: MUT, t1: out1 });
+  big(ctx, t, 'YOUR EXCUSES', 540, 800, 10.9, { size: 70, color: MUT, t1: out1 });
+  big(ctx, t, 'UNTAPPED', 540, 980, 12.1, { size: 92, color: UP, glow: 'rgba(147,249,255,.55)', t1: out1 });
+  big(ctx, t, 'POTENTIAL', 540, 1100, 12.5, { size: 92, color: UP, glow: 'rgba(147,249,255,.55)', t1: out1 });
+  big(ctx, t, "THAT PERSON ISN'T…", 540, 470, 14.15, { size: 46, color: INK });
+  NO.forEach(([t0, w], i) => { const y = 700 + i * 170; big(ctx, t, w, 540, y, t0, { size: 78, color: INK });
+    X.font = '400 78px Michroma'; const hw = X.measureText(w).width / 2 + 30; strike(ctx, t, 540 - hw, 540 + hw, y - 26, t0 + .55); });
+} });

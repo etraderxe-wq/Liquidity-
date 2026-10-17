@@ -1,0 +1,124 @@
+{
+ "name": "You vs You",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "bpm": 90,
+ "palette": {
+  "bg": "#050608",
+  "ink": "#FCFCFC",
+  "acc": "#57A1EF",
+  "clay": "#3977D5",
+  "hi": "#93F9FF",
+  "mut": "#8C94A8"
+ },
+ "fonts": {
+  "display": "Tajawal",
+  "body": "Tajawal",
+  "num": "Inter"
+ },
+ "images": {
+  "logo": "assets/logo.png"
+ },
+ "extraFonts": [
+  {
+   "family": "Michroma",
+   "file": "assets/michroma.woff2",
+   "weight": "400"
+  }
+ ],
+ "post": {
+  "grain": 0.035,
+  "vignette": 0.35
+ },
+ "scenes": [
+  {
+   "id": "s1",
+   "file": "scenes/s1.js"
+  },
+  {
+   "id": "s2",
+   "file": "scenes/s2.js",
+   "transition": {
+    "type": "crossfade",
+    "dur": 0.5
+   }
+  },
+  {
+   "id": "s3",
+   "file": "scenes/s3.js",
+   "transition": {
+    "type": "zoom",
+    "dur": 0.4
+   }
+  },
+  {
+   "id": "s4",
+   "file": "scenes/s4.js",
+   "transition": {
+    "type": "flash",
+    "dur": 0.3
+   }
+  },
+  {
+   "id": "s5",
+   "file": "scenes/s5.js",
+   "transition": {
+    "type": "wipe",
+    "dur": 0.5,
+    "dir": "rtl",
+    "ease": "expoInOut"
+   }
+  },
+  {
+   "id": "s6",
+   "file": "scenes/s6.js",
+   "transition": {
+    "type": "wipe",
+    "dur": 0.5,
+    "dir": "ltr",
+    "ease": "expoInOut"
+   }
+  },
+  {
+   "id": "s7",
+   "file": "scenes/s7.js",
+   "transition": {
+    "type": "zoom",
+    "dur": 0.4
+   }
+  },
+  {
+   "id": "s8",
+   "file": "scenes/s8.js",
+   "transition": {
+    "type": "push",
+    "dur": 0.5,
+    "dir": "up",
+    "ease": "expoInOut"
+   }
+  },
+  {
+   "id": "s9",
+   "file": "scenes/s9.js",
+   "transition": {
+    "type": "glitch",
+    "dur": 0.35
+   }
+  },
+  {
+   "id": "s10",
+   "file": "scenes/s10.js",
+   "transition": {
+    "type": "push",
+    "dur": 0.5,
+    "dir": "up",
+    "ease": "expoInOut"
+   }
+  },
+  {
+   "id": "subs",
+   "file": "scenes/subs-overlay.js"
+  }
+ ]
+}
