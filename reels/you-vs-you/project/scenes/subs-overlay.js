@@ -10,5 +10,5 @@ MOTION.scene({ id: 'subs', overlay: true,
     X.beginPath(); X.roundRect(540 - Math.max(L.width, 560) / 2 - 34, y0 - 110, Math.max(L.width, 560) + 68, n * 73 + 80, 24); X.fill(); X.stroke(); X.restore();
     ctx.text(X, s.en, 540, y0 - 66, { family: 'Inter', weight: 600, size: 26, color: '#8C94A8', dir: 'ltr', maxWidth: 900, alpha: a });
     ctx.text.drawLayout(X, L, 540, y0, { align: 'center', color: '#FCFCFC', perWord: (k, w) => ({ alpha: a, dy: (1 - at(t, s.s - .08, s.s + .2, 'expoOut')) * 14,
-      color: HI.test(w.text) ? '#93F9FF' : '#FCFCFC', shadow: HI.test(w.text) ? { blur: 18, color: 'rgba(147,249,255,.5)' } : undefined }) });
+      color: HI.test(w) ? '#93F9FF' : '#FCFCFC', shadow: HI.test(w) ? { blur: 18, color: 'rgba(147,249,255,.5)' } : undefined }) });
   } });
