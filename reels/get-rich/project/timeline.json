@@ -1,0 +1,68 @@
+{
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "duration": 12.5,
+ "bpm": 90,
+ "beatsPerBar": 4,
+ "beatOffset": 0,
+ "beats": [
+  0.0,
+  0.667,
+  1.333,
+  2.0,
+  2.667,
+  3.333,
+  4.0,
+  4.667,
+  5.333,
+  6.0,
+  6.667,
+  7.333,
+  8.0,
+  8.667,
+  9.333,
+  10.0,
+  10.667,
+  11.333,
+  12.0,
+  12.667
+ ],
+ "sections": [
+  {
+   "name": "main",
+   "start": 0,
+   "end": 12.5
+  }
+ ],
+ "scenes": [
+  {
+   "id": "main",
+   "file": "scenes/main.js",
+   "start": 0,
+   "end": 11.49,
+   "lines": [],
+   "transition": null
+  },
+  {
+   "id": "end",
+   "file": "scenes/end.js",
+   "start": 11.49,
+   "end": 12.5,
+   "lines": [],
+   "transition": {
+    "type": "crossfade",
+    "dur": 0.3
+   }
+  },
+  {
+   "id": "subs",
+   "file": "scenes/subs-overlay.js",
+   "start": 0,
+   "end": 12.5,
+   "lines": [],
+   "transition": null
+  }
+ ],
+ "vo": []
+}

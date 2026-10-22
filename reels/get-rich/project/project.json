@@ -1,0 +1,52 @@
+{
+ "name": "Get Rich",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "bpm": 90,
+ "palette": {
+  "bg": "#050608",
+  "ink": "#FCFCFC",
+  "acc": "#57A1EF",
+  "clay": "#3977D5",
+  "hi": "#93F9FF",
+  "mut": "#8C94A8"
+ },
+ "fonts": {
+  "display": "Tajawal",
+  "body": "Tajawal",
+  "num": "Inter"
+ },
+ "images": {
+  "logo": "assets/logo.png"
+ },
+ "extraFonts": [
+  {
+   "family": "Michroma",
+   "file": "assets/michroma.woff2",
+   "weight": "400"
+  }
+ ],
+ "post": {
+  "grain": 0.035,
+  "vignette": 0.4
+ },
+ "scenes": [
+  {
+   "id": "main",
+   "file": "scenes/main.js"
+  },
+  {
+   "id": "end",
+   "file": "scenes/end.js",
+   "transition": {
+    "type": "crossfade",
+    "dur": 0.3
+   }
+  },
+  {
+   "id": "subs",
+   "file": "scenes/subs-overlay.js"
+  }
+ ]
+}
