@@ -1,0 +1,68 @@
+{
+ "name": "Market Story 22 Oct",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "bpm": 90,
+ "palette": {
+  "bg": "#030407",
+  "ink": "#FCFCFC",
+  "acc": "#57A1EF",
+  "clay": "#3977D5",
+  "hi": "#93F9FF",
+  "mut": "#9AA4B8"
+ },
+ "fonts": {
+  "display": "Tajawal",
+  "body": "Tajawal",
+  "num": "Inter"
+ },
+ "images": {
+  "logo": "assets/logo.png"
+ },
+ "extraFonts": [
+  {
+   "family": "Michroma",
+   "file": "assets/michroma.woff2",
+   "weight": "400"
+  }
+ ],
+ "post": {
+  "grain": 0.025,
+  "vignette": 0.3
+ },
+ "scenes": [
+  {
+   "id": "s1",
+   "file": "scenes/s1.js"
+  },
+  {
+   "id": "s2",
+   "file": "scenes/s2.js"
+  },
+  {
+   "id": "s3",
+   "file": "scenes/s3.js"
+  },
+  {
+   "id": "s4",
+   "file": "scenes/s4.js"
+  },
+  {
+   "id": "s5",
+   "file": "scenes/s5.js"
+  },
+  {
+   "id": "s6",
+   "file": "scenes/s6.js"
+  },
+  {
+   "id": "s7",
+   "file": "scenes/s7.js"
+  },
+  {
+   "id": "s8",
+   "file": "scenes/s8.js"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+--- /tmp/claude-0/-home-user-Liquidity-/b7d10876-ad47-57b2-8618-4f38c33c0c31/scratchpad/five/eng/motion/engine.js	2026-10-12 08:29:21.119562540 +0000
++++ /tmp/claude-0/-home-user-Liquidity-/b7d10876-ad47-57b2-8618-4f38c33c0c31/scratchpad/emx/motion/engine.js	2026-10-16 13:44:49.035026159 +0000
+@@ -686,15 +686,15 @@
+ }
+ function visibleWindow(sc, i) {
+   const tin = sc.transition ? (sc.transition.dur ?? 0.4) : 0;
+-  const next = S.scenes[i + 1], tout = next && next.transition && Math.abs(next.start - sc.end) < 1e-3 ? (next.transition.dur ?? 0.4) : 0;
++  const next = S.main[i + 1], tout = next && next.transition && Math.abs(next.start - sc.end) < 1e-3 ? (next.transition.dur ?? 0.4) : 0;
+   return [sc.start - tin / 2, sc.end + tout / 2];
+ }
+ function renderFrame(t) {
+   if (!M.ready) throw new Error('engine not ready');
+   OX.setTransform(1, 0, 0, 1, 0, 0); resetCtxState(OX);
+   OX.fillStyle = S.P.bg; OX.fillRect(0, 0, OUT.width, OUT.height);
+-  const vis = []; S.scenes.forEach((sc, i) => { const [a, b] = visibleWindow(sc, i); if (t >= a && t < b) vis.push(sc); });
+-  if (!vis.length && S.scenes.length) vis.push(t < S.scenes[0].start ? S.scenes[0] : S.scenes[S.scenes.length - 1]);
++  S.main = S.main || S.scenes.filter(s => !s.overlay); const vis = []; S.main.forEach((sc, i) => { const [a, b] = visibleWindow(sc, i); if (t >= a && t < b) vis.push(sc); });
++  if (!vis.length && S.main.length) vis.push(t < S.main[0].start ? S.main[0] : S.main[S.main.length - 1]);
+   if (vis.length === 1) { drawScene(vis[0], t, OX); }
+   else {
+     // composite pairwise: [A, B] with B's transition
+@@ -710,6 +710,7 @@
+       acc = target;
+     }
+   }
++  for (const ov of S.scenes.filter(s => s.overlay)) { OX.setTransform(1, 0, 0, 1, 0, 0); drawScene(ov, t, OX); }
+   OX.setTransform(1, 0, 0, 1, 0, 0); resetCtxState(OX);
+   const post = S.proj.post || {};
+   if (post.vignette) vignette(OX, post.vignette);
