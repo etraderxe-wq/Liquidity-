@@ -1,5 +1,5 @@
 // Weekly calendar analysis (week-N-analysis.png + .pdf) in the official EMULLAX blue identity.
-// usage: node weekly-calendar/analysis/render.js weekly-calendar/analysis/week-4.json
+// usage: node weekly-calendar/analysis/render.js weekly-calendar/analysis/week-4.json [--story]
 const path=require('path'),fs=require('fs');let chromium;try{({chromium}=require('playwright'))}catch(e){({chromium}=require(require('child_process').execSync('npm root -g').toString().trim()+'/playwright'))}
 const here=__dirname,root=path.resolve(here,'../..'),skill=path.join(root,'.claude/skills/emullax-carousel/assets');
 const fonts=fs.readFileSync(path.join(skill,'fonts.css'),'utf8').replace(/url\(assets\//g,'url(file://'+skill+'/');
@@ -35,22 +35,30 @@ h1{font-family:Tajawal;font-weight:900;font-size:76px;line-height:1.25;margin:8p
 .ft{margin-top:44px;border-top:1px solid rgba(252,252,252,.35);padding-top:26px;display:flex;justify-content:space-between;align-items:center}
 .ft .h{font-weight:700;font-size:30px;direction:ltr}.ft .d{opacity:.9;font-size:22px}`;
 const file=path.resolve(process.argv[2]||path.join(here,'week-4.json')),D=JSON.parse(fs.readFileSync(file,'utf8'));
-const html=`<section class="st" id="pg">
-<div class="hd"><div><div class="lbl"><b>LIQUIDITY GROUP</b> · تحليل الأجندة الاقتصادية</div><h1>${esc(D.theme)}</h1>
-<div class="rg">${num(D.range)} · بتوقيت الكويت</div></div><img src="${logo}"></div>
-<div class="card sum"><h2>الصورة العامة</h2>${num(D.summary)}
-<div class="pk">${D.peak.map(([d,t,e])=>`<div><b>${num(d)}</b><i class="n">${esc(t)}</i><span>${num(e)}</span></div>`).join('')}</div></div>
-<div class="sec">أهم الأحداث وش نراقب</div>
-${D.events.map(e=>`<div class="card l${e.lvl}"><div class="eh"><div class="c">${e.c}</div><div class="tt">${num(e.title)}</div>
+const head=`<div class="hd"><div><div class="lbl"><b>LIQUIDITY GROUP</b> · تحليل الأجندة الاقتصادية</div><h1>${esc(D.theme)}</h1>
+<div class="rg">${num(D.range)} · بتوقيت الكويت</div></div><img src="${logo}"></div>`;
+const sum=`<div class="card sum"><h2>الصورة العامة</h2>${num(D.summary)}
+<div class="pk">${D.peak.map(([d,t,e])=>`<div><b>${num(d)}</b><i class="n">${esc(t)}</i><span>${num(e)}</span></div>`).join('')}</div></div>`;
+const ev=e=>`<div class="card l${e.lvl}"><div class="eh"><div class="c">${e.c}</div><div class="tt">${num(e.title)}</div>
 <div class="tm">${num(e.day)}<b class="${/\d/.test(e.t)?'n':''}">${esc(e.t)}</b></div></div>
-<div class="fc">${e.fc.map(([k,v])=>`<span><em>${num(k)}</em>${num(v)}</span>`).join('')}</div><div class="nt">${num(e.note)}</div></div>`).join('')}
-<div class="card tip"><b>تنبيه التوقيت:</b> ${num(D.tz)}<br><b>أحداث إضافية:</b> ${num(D.extra)}</div>
-<div class="ft"><span class="h">@emullax</span><span class="d">التوقعات من إجماع السوق وقابلة للتغيير · ليست توصية استثمارية</span></div></section>`;
+<div class="fc">${e.fc.map(([k,v])=>`<span><em>${num(k)}</em>${num(v)}</span>`).join('')}</div><div class="nt">${num(e.note)}</div></div>`;
+const tip=`<div class="card tip"><b>تنبيه التوقيت:</b> ${num(D.tz)}<br><b>أحداث إضافية:</b> ${num(D.extra)}</div>`;
+const ft=`<div class="ft"><span class="h">@emullax</span><span class="d">التوقعات من إجماع السوق وقابلة للتغيير · ليست توصية استثمارية</span></div>`;
+const story=process.argv.includes('--story');
+// story mode: 1080x1920 slides; D.story lists event indexes per slide after the cover ("tip" = timing card)
+const pages=story?[[sum],...D.story.map(g=>g.map(x=>x==='tip'?tip:ev(D.events[x])))]:[[sum,'<div class="sec">أهم الأحداث وش نراقب</div>',...D.events.map(ev),tip]];
+const html=pages.map((g,i)=>`<section class="st${story?' sy':''}" id="pg${i}">${head}${story&&i?`<div class="sec">أهم الأحداث <span class="pt n">${i}/${pages.length-1}</span></div>`:''}${g.join('')}${ft}</section>`).join('');
+const xcss=`.sy{height:1920px;padding-bottom:0}.sy .hd{padding-top:190px}.sy .ft{position:absolute;left:64px;right:64px;bottom:200px}
+.sy .hd h1{font-size:64px}.sy .card{margin-top:30px}.sy .sum{font-size:35px;line-height:1.75;padding:40px 36px}.sy .sum h2{font-size:46px}.sy .pk{flex-direction:column}.sy .pk div{display:flex;align-items:center;gap:20px}.sy .pk b{width:170px;font-size:28px}.sy .pk i{width:290px;font-size:40px}.sy .pk span{font-size:28px}.sy .sec{font-size:44px;margin-top:44px}.sy .eh .tt{font-size:38px}.sy .eh .tm{font-size:25px}.sy .eh .tm b{font-size:36px}.sy .fc>span{font-size:28px}.sy .nt{font-size:31px;padding:20px 28px 30px}.sy .tip{font-size:31px;padding:32px}.pt{background:#57A1EF;color:#00051A;font-weight:800;font-size:24px;border-radius:30px;padding:4px 18px;margin-right:12px;vertical-align:middle;font-family:"IBM Plex Sans Arabic"}`;
 (async()=>{const tmp=path.join(here,'.a.html');
-fs.writeFileSync(tmp,`<!doctype html><html lang="ar"><head><meta charset="utf-8"><style>${css}</style></head><body>${html}</body></html>`);
-const b=await chromium.launch();const p=await b.newPage({viewport:{width:1080,height:1350}});
+fs.writeFileSync(tmp,`<!doctype html><html lang="ar"><head><meta charset="utf-8"><style>${css}${xcss}</style></head><body>${html}</body></html>`);
+const b=await chromium.launch();const p=await b.newPage({viewport:{width:1080,height:1920}});
 await p.goto('file://'+tmp,{waitUntil:'networkidle'});await p.evaluate(()=>document.fonts.ready);
-const el=await p.$('#pg'),out=path.join(path.dirname(file),D.id);await el.screenshot({path:out+'.png'});
-const h=Math.ceil((await el.boundingBox()).height);
-await p.pdf({path:out+'.pdf',width:'1080px',height:h+'px',printBackground:true,margin:{top:0,bottom:0,left:0,right:0}});
-fs.unlinkSync(tmp);console.log(D.id,h+'px');await b.close();})();
+const base=path.join(path.dirname(file),D.id);let bad=0;
+for(let i=0;i<pages.length;i++){const el=await p.$('#pg'+i);
+ if(story){const gap=await el.evaluate(e=>e.querySelector('.ft').getBoundingClientRect().top-[...e.querySelectorAll('.card')].pop().getBoundingClientRect().bottom);
+  if(gap<20){bad++;console.log('OVERFLOW story',i+1,gap)}
+  await el.screenshot({path:`${base}-story-${i+1}.png`});continue}
+ await el.screenshot({path:base+'.png'});const h=Math.ceil((await el.boundingBox()).height);
+ await p.pdf({path:base+'.pdf',width:'1080px',height:h+'px',printBackground:true,margin:{top:0,bottom:0,left:0,right:0}});console.log(D.id,h+'px')}
+fs.unlinkSync(tmp);if(story)console.log(`stories ${pages.length}, ${bad} overflow`);await b.close();process.exit(bad?1:0)})();
