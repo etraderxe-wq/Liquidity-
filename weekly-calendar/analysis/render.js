@@ -44,11 +44,23 @@ const ev=e=>`<div class="card l${e.lvl}"><div class="eh"><div class="c">${e.c}</
 <div class="fc">${e.fc.map(([k,v])=>`<span><em>${num(k)}</em>${num(v)}</span>`).join('')}</div><div class="nt">${num(e.note)}</div></div>`;
 const tip=`<div class="card tip"><b>تنبيه التوقيت:</b> ${num(D.tz)}<br><b>أحداث إضافية:</b> ${num(D.extra)}</div>`;
 const ft=`<div class="ft"><span class="h">@emullax</span><span class="d">التوقعات من إجماع السوق وقابلة للتغيير · ليست توصية استثمارية</span></div>`;
+// PDF-only cashback card (hidden in the PNG screenshot); offer is 60% of the partner commission, not an Exness promotion
+const qr=D.promo?'data:image/png;base64,'+fs.readFileSync(path.join(here,D.promo.qr)).toString('base64'):'';
+const promo=D.promo?`<div class="card promo"><div class="pt2"><div class="big"><span class="n">60%</span> كاش باك</div>
+<div class="pd">سجّل حسابك في Exness تحت وكالتي، وأرجّع لك <span class="n">60%</span> من عمولة الشريك اللي توصلني من تداولاتك المؤهّلة. مثال: إذا كانت العمولة <span class="n">$10</span> ترجع لك <span class="n">$6</span>.</div>
+<a class="lk" href="${D.promo.link}">سجّل من هنا ←</a><div class="url n">${esc(D.promo.link.replace('https://',''))}</div>
+<div class="pn">الكاش باك من عمولة الشريك وليس من الإيداع أو الأرباح، وليس ربحاً مضموناً. يخضع لشروط العرض. التداول ينطوي على مخاطر.</div></div>
+<a href="${D.promo.link}"><img src="${qr}"></a></div>`:'';
 const story=process.argv.includes('--story');
 // story mode: 1080x1920 slides; D.story lists event indexes per slide after the cover ("tip" = timing card)
-const pages=story?[[sum],...D.story.map(g=>g.map(x=>x==='tip'?tip:ev(D.events[x])))]:[[sum,'<div class="sec">أهم الأحداث وش نراقب</div>',...D.events.map(ev),tip]];
+const pages=story?[[sum],...D.story.map(g=>g.map(x=>x==='tip'?tip:ev(D.events[x])))]:[[sum,'<div class="sec">أهم الأحداث وش نراقب</div>',...D.events.map(ev),tip,promo]];
 const html=pages.map((g,i)=>`<section class="st${story?' sy':''}" id="pg${i}">${head}${story&&i?`<div class="sec">أهم الأحداث <span class="pt n">${i}/${pages.length-1}</span></div>`:''}${g.join('')}${ft}</section>`).join('');
-const xcss=`.sy{height:1920px;padding-bottom:0}.sy .hd{padding-top:190px}.sy .ft{position:absolute;left:64px;right:64px;bottom:200px}
+const xcss=`.promo{display:flex;gap:30px;align-items:center;padding:34px 34px;border:1.5px solid #57A1EF;background:linear-gradient(150deg,rgba(57,119,213,.45),rgba(0,5,26,.88))}
+.promo .pt2{flex:1}.promo .big{font-family:Tajawal;font-weight:900;font-size:60px;color:#93F9FF;line-height:1.2}
+.promo .pd{font-size:27px;line-height:1.65;margin:10px 0 18px}.promo .lk{display:inline-block;background:#93F9FF;color:#00051A;font-weight:800;font-size:28px;border-radius:40px;padding:10px 30px;text-decoration:none}
+.promo .url{font-size:20px;color:#C9D4E8;margin-top:10px;text-align:right}.promo .pn{font-size:19px;color:#8C9AB8;margin-top:14px;line-height:1.5}
+.promo img{width:230px;height:230px;border-radius:16px;display:block}.hidepromo .promo{display:none}
+.sy{height:1920px;padding-bottom:0}.sy .hd{padding-top:190px}.sy .ft{position:absolute;left:64px;right:64px;bottom:200px}
 .sy .hd h1{font-size:64px}.sy .card{margin-top:30px}.sy .sum{font-size:35px;line-height:1.75;padding:40px 36px}.sy .sum h2{font-size:46px}.sy .pk{flex-direction:column}.sy .pk div{display:flex;align-items:center;gap:20px}.sy .pk b{width:170px;font-size:28px}.sy .pk i{width:290px;font-size:40px}.sy .pk span{font-size:28px}.sy .sec{font-size:44px;margin-top:44px}.sy .eh .tt{font-size:38px}.sy .eh .tm{font-size:25px}.sy .eh .tm b{font-size:36px}.sy .fc>span{font-size:28px}.sy .nt{font-size:31px;padding:20px 28px 30px}.sy .tip{font-size:31px;padding:32px}.pt{background:#57A1EF;color:#00051A;font-weight:800;font-size:24px;border-radius:30px;padding:4px 18px;margin-right:12px;vertical-align:middle;font-family:"IBM Plex Sans Arabic"}`;
 (async()=>{const tmp=path.join(here,'.a.html');
 fs.writeFileSync(tmp,`<!doctype html><html lang="ar"><head><meta charset="utf-8"><style>${css}${xcss}</style></head><body>${html}</body></html>`);
@@ -59,6 +71,6 @@ for(let i=0;i<pages.length;i++){const el=await p.$('#pg'+i);
  if(story){const gap=await el.evaluate(e=>e.querySelector('.ft').getBoundingClientRect().top-[...e.querySelectorAll('.card')].pop().getBoundingClientRect().bottom);
   if(gap<20){bad++;console.log('OVERFLOW story',i+1,gap)}
   await el.screenshot({path:`${base}-story-${i+1}.png`});continue}
- await el.screenshot({path:base+'.png'});const h=Math.ceil((await el.boundingBox()).height);
+ await p.evaluate(()=>document.body.classList.add('hidepromo'));await el.screenshot({path:base+'.png'});await p.evaluate(()=>document.body.classList.remove('hidepromo'));const h=Math.ceil((await el.boundingBox()).height);
  await p.pdf({path:base+'.pdf',width:'1080px',height:h+'px',printBackground:true,margin:{top:0,bottom:0,left:0,right:0}});console.log(D.id,h+'px')}
 fs.unlinkSync(tmp);if(story)console.log(`stories ${pages.length}, ${bad} overflow`);await b.close();process.exit(bad?1:0)})();
