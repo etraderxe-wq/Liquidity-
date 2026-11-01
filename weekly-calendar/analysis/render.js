@@ -42,7 +42,7 @@ const sum=`<div class="card sum"><h2>الصورة العامة</h2>${num(D.summa
 const ev=e=>`<div class="card l${e.lvl}"><div class="eh"><div class="c">${e.c}</div><div class="tt">${num(e.title)}</div>
 <div class="tm">${num(e.day)}<b class="${/\d/.test(e.t)?'n':''}">${esc(e.t)}</b></div></div>
 <div class="fc">${e.fc.map(([k,v])=>`<span><em>${num(k)}</em>${num(v)}</span>`).join('')}</div><div class="nt">${num(e.note)}</div></div>`;
-const tip=`<div class="card tip"><b>تنبيه التوقيت:</b> ${num(D.tz)}<br><b>أحداث إضافية:</b> ${num(D.extra)}</div>`;
+const tip=`<div class="card tip"><b>تنبيه التوقيت:</b> ${num(D.tz)}<br><b>${D.extraLabel||'أحداث إضافية'}:</b> ${num(D.extra)}</div>`;
 const ft=`<div class="ft"><span class="h">@emullax</span><span class="d">التوقعات من إجماع السوق وقابلة للتغيير · ليست توصية استثمارية</span></div>`;
 // PDF-only cashback card (hidden in the PNG screenshot); offer is 60% of the partner commission, not an Exness promotion
 const qr=D.promo?'data:image/png;base64,'+fs.readFileSync(path.join(here,D.promo.qr)).toString('base64'):'';
@@ -51,15 +51,30 @@ const promo=D.promo?`<div class="card promo"><div class="pt2"><div class="big"><
 <a class="lk" href="${D.promo.link}">سجّل من هنا ←</a><div class="url n">${esc(D.promo.link.replace('https://',''))}</div>
 <div class="pn">الكاش باك من عمولة الشريك وليس من الإيداع أو الأرباح، وليس ربحاً مضموناً. يخضع لشروط العرض. التداول ينطوي على مخاطر.</div></div>
 <a href="${D.promo.link}"><img src="${qr}"></a></div>`:'';
+const impact=D.impact?`<div class="card imp"><h2>التأثير المتوقع على العملات والذهب</h2>${D.impact.map(([c,n,t])=>`<div class="ir"><div class="c">${c}</div><div><b>${n}</b>${num(t)}</div></div>`).join('')}</div>`:'';
+const risks=D.risks?`<div class="card imp"><h2>أبرز المخاطر</h2>${D.risks.map(t=>`<div class="rk">${num(t)}</div>`).join('')}</div>`:'';
+const days=D.days?`<div class="sec">الجدول اليومي</div>${D.days.map(d=>`<div class="card dd"><div class="dh"><b>${d.d}</b><span>${num(d.dt)}</span></div>
+${d.ev.map(([t,c,e,k])=>`<div class="r${k?' k':''}"><div class="e">${esc(e)}</div><div class="c">${c}</div><div class="t${/\d/.test(t)?' n':''}">${t}</div></div>`).join('')}</div>`).join('')}`:'';
+const blocks={tip,impact,risks};
 const story=process.argv.includes('--story');
 // story mode: 1080x1920 slides; D.story lists event indexes per slide after the cover ("tip" = timing card)
-const pages=story?[[sum],...D.story.map(g=>g.map(x=>x==='tip'?tip:ev(D.events[x])))]:[[sum,'<div class="sec">أهم الأحداث وش نراقب</div>',...D.events.map(ev),tip,promo]];
+const pages=story?[[sum],...D.story.map(g=>g.map(x=>blocks[x]??ev(D.events[x])))]:[[sum,days,'<div class="sec">أهم الأحداث وش نراقب</div>',...D.events.map(ev),impact,risks,tip,promo]];
 const html=pages.map((g,i)=>`<section class="st${story?' sy':''}" id="pg${i}">${head}${story&&i?`<div class="sec">أهم الأحداث <span class="pt n">${i}/${pages.length-1}</span></div>`:''}${g.join('')}${ft}</section>`).join('');
 const xcss=`.promo{display:flex;gap:30px;align-items:center;padding:34px 34px;border:1.5px solid #57A1EF;background:linear-gradient(150deg,rgba(57,119,213,.45),rgba(0,5,26,.88))}
 .promo .pt2{flex:1}.promo .big{font-family:Tajawal;font-weight:900;font-size:60px;color:#93F9FF;line-height:1.2}
 .promo .pd{font-size:27px;line-height:1.65;margin:10px 0 18px}.promo .lk{display:inline-block;background:#93F9FF;color:#00051A;font-weight:800;font-size:28px;border-radius:40px;padding:10px 30px;text-decoration:none}
 .promo .url{font-size:20px;color:#C9D4E8;margin-top:10px;text-align:right}.promo .pn{font-size:19px;color:#8C9AB8;margin-top:14px;line-height:1.5}
 .promo img{width:230px;height:230px;border-radius:16px;display:block}.hidepromo .promo{display:none}
+.imp{padding:30px 32px}.imp h2{font-family:Tajawal;font-weight:800;font-size:38px;color:#93F9FF;margin-bottom:8px}
+.ir{display:flex;gap:20px;align-items:flex-start;padding:16px 0;border-top:1px solid #0F1A36;font-size:26px;line-height:1.6}.ir:first-of-type{border-top:0}
+.ir .c{flex:none;width:82px;text-align:center;border:1.5px solid #3977D5;color:#93F9FF;border-radius:10px;font-size:21px;font-weight:700;padding:4px 0;margin-top:4px;direction:ltr}.ir b{display:block;font-size:28px}
+.rk{position:relative;padding:12px 30px 12px 0;font-size:26px;line-height:1.6}.rk:before{content:"";position:absolute;right:4px;top:26px;width:12px;height:12px;border-radius:50%;background:#93F9FF}
+.dd .dh{display:flex;align-items:baseline;gap:16px;padding:18px 28px;background:linear-gradient(90deg,rgba(57,119,213,.18),rgba(3,11,36,0));border-bottom:1px solid #1A2A4A}
+.dd .dh b{font-family:Tajawal;font-weight:700;font-size:34px}.dd .dh span{color:#57A1EF;font-size:28px;font-weight:700}
+.dd .r{display:flex;align-items:center;gap:22px;min-height:70px;padding:0 28px;border-top:1px solid #0F1A36}.dd .r:first-of-type{border-top:0}
+.dd .r .t{width:150px;flex:none;font-size:28px;font-weight:700;text-align:left}.dd .r .c{flex:none;width:82px;text-align:center;border:1.5px solid #3977D5;color:#93F9FF;border-radius:10px;font-size:20px;font-weight:700;padding:4px 0;direction:ltr}
+.dd .r .e{flex:1;font-size:27px;font-weight:600}.dd .r.k .e{color:#93F9FF}.dd .r.k .e:after{content:" ★"}
+.sy .imp h2{font-size:44px}.sy .ir{font-size:31px}.sy .ir b{font-size:34px}.sy .rk{font-size:32px;padding-block:16px}.sy .rk:before{top:32px}
 .sy{height:1920px;padding-bottom:0}.sy .hd{padding-top:190px}.sy .ft{position:absolute;left:64px;right:64px;bottom:200px}
 .sy .hd h1{font-size:64px}.sy .card{margin-top:30px}.sy .sum{font-size:35px;line-height:1.75;padding:40px 36px}.sy .sum h2{font-size:46px}.sy .pk{flex-direction:column}.sy .pk div{display:flex;align-items:center;gap:20px}.sy .pk b{width:170px;font-size:28px}.sy .pk i{width:290px;font-size:40px}.sy .pk span{font-size:28px}.sy .sec{font-size:44px;margin-top:44px}.sy .eh .tt{font-size:38px}.sy .eh .tm{font-size:25px}.sy .eh .tm b{font-size:36px}.sy .fc>span{font-size:28px}.sy .nt{font-size:31px;padding:20px 28px 30px}.sy .tip{font-size:31px;padding:32px}.pt{background:#57A1EF;color:#00051A;font-weight:800;font-size:24px;border-radius:30px;padding:4px 18px;margin-right:12px;vertical-align:middle;font-family:"IBM Plex Sans Arabic"}`;
 (async()=>{const tmp=path.join(here,'.a.html');
