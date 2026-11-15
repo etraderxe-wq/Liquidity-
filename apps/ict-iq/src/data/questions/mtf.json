@@ -1,0 +1,181 @@
+[
+  {
+    "id": "TF-01",
+    "section": "mtf",
+    "type": "mcq",
+    "difficulty": "easy",
+    "points": 1,
+    "skills": ["mtf", "structure"],
+    "concept": "Top-down analysis order",
+    "question": "ما الترتيب الصحيح لتحليل Top-Down حسب منهجية ICT؟",
+    "options": [
+      {"id": "a", "text": "1M للتنفيذ ← 15M للهيكل ← Daily للانحياز ← Weekly للسيولة"},
+      {"id": "b", "text": "Monthly/Weekly للانحياز والسيولة ← Daily للانحياز اليومي ← 4H/1H لتحديد POI ← 15M/5M للهيكل ← 1M للتنفيذ"},
+      {"id": "c", "text": "4H فقط لأنه يجمع بين كل الأطر"},
+      {"id": "d", "text": "Daily للتنفيذ ← 1M للانحياز"}
+    ],
+    "answer": "b",
+    "explanation": "التحليل يبدأ من الإطار الأعلى لتحديد الانحياز والـ Draw on Liquidity ثم ينزل تدريجياً حتى إطار التنفيذ. البدء من 1M يجعل الصورة الكبيرة تابعة للضجيج بدلاً من العكس."
+  },
+  {
+    "id": "TF-02",
+    "section": "mtf",
+    "type": "tf",
+    "difficulty": "easy",
+    "points": 1,
+    "skills": ["mtf", "structure"],
+    "concept": "LTF MSS does not flip HTF bias",
+    "question": "ظهور MSS على فريم 1M عكس الانحياز اليومي يكفي وحده لقلب الانحياز اليومي.",
+    "options": [
+      {"id": "t", "text": "صح"},
+      {"id": "f", "text": "خطأ"}
+    ],
+    "answer": "f",
+    "explanation": "الـ MSS على 1M يغيّر هيكل الإطار الصغير فقط وغالباً يكون جزءاً من تصحيح داخل حركة الإطار الأعلى. الانحياز اليومي يتغيّر بتغيّر الهيكل والسيولة على الإطار اليومي نفسه."
+  },
+  {
+    "id": "TF-03",
+    "section": "mtf",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["mtf", "fvg_ob"],
+    "concept": "Role of 4H/1H in top-down",
+    "question": "بعد تحديد انحياز يومي صاعد، ما الدور الأساسي لفريمَي 4H و1H في التحليل؟",
+    "options": [
+      {"id": "a", "text": "تحديد POI مثل Order Block أو FVG في منطقة Discount يتوافق مع الانحياز اليومي"},
+      {"id": "b", "text": "تحديد الانحياز الشهري"},
+      {"id": "c", "text": "تحديد نقطة الدخول الدقيقة ووقف الخسارة بالنقطة"},
+      {"id": "d", "text": "تأكيد الإشارة بمؤشر RSI"}
+    ],
+    "answer": "a",
+    "explanation": "الـ 4H/1H هما إطار تحديد منطقة الاهتمام (POI) التي يُتوقع أن ينطلق منها السعر نحو الهدف. التنفيذ الدقيق يكون على 5M/1M داخل هذه المنطقة، والانحياز الشهري يُحدد من الإطار الشهري نفسه."
+  },
+  {
+    "id": "TF-04",
+    "section": "mtf",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["mtf", "liquidity"],
+    "concept": "HTF Draw on Liquidity",
+    "question": "الانحياز الأسبوعي واليومي صاعد. فوق السعر يوجد: Daily FVG غير مُغلق، وفوقه High الأسبوع الماضي (PWH) لم يُكسر بعد. ما الـ Draw on Liquidity الأساسي للأسبوع؟",
+    "options": [
+      {"id": "a", "text": "Buy-side Liquidity فوق High الأسبوع الماضي (PWH)"},
+      {"id": "b", "text": "Equal Lows على فريم 5M تحت السعر"},
+      {"id": "c", "text": "أقرب رقم دائري فوق السعر"},
+      {"id": "d", "text": "الـ Daily FVG فوق السعر"}
+    ],
+    "answer": "a",
+    "partial": {"d": 0.4},
+    "explanation": "السيولة الواضحة على الإطار الأعلى (BSL فوق PWH) هي الهدف الأساسي للأسبوع مع انحياز صاعد. الـ Daily FVG هدف مرحلي معقول في الطريق لكنه ليس الـ Draw الأساسي، وEqual Lows على 5M تعاكس الانحياز."
+  },
+  {
+    "id": "TF-05",
+    "section": "mtf",
+    "type": "tf",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["mtf", "premium"],
+    "concept": "LTF entry in HTF context",
+    "question": "عندما يكون الانحياز اليومي هابطاً، فالإعداد الأمثل على 15M هو انتظار ارتداد السعر إلى PD Array في منطقة Premium ثم البحث عن Bearish MSS على إطار أصغر للدخول.",
+    "options": [
+      {"id": "t", "text": "صح"},
+      {"id": "f", "text": "خطأ"}
+    ],
+    "answer": "t",
+    "explanation": "مع انحياز هابط يُفضّل البيع من Premium بعد ارتداد، ثم يأتي تأكيد الإطار الصغير بالـ MSS. البيع من Discount بعد هبوط ممتد يعني الدخول في أسوأ سعر قرب السيولة السفلى."
+  },
+  {
+    "id": "TF-06",
+    "section": "mtf",
+    "type": "mcq",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["mtf", "structure", "premium"],
+    "concept": "HTF vs LTF conflict",
+    "question": "الانحياز اليومي هابط بعد رفض السعر من Weekly Bearish Order Block في Premium. على 15M ظهر الآن Bullish MSS. ما التفسير الأرجح؟",
+    "options": [
+      {"id": "a", "text": "غالباً ارتداد داخل الموجة الهابطة اليومية، وقد يوفّر سعر بيع أفضل عند PD Array في Premium على 15M/1H"},
+      {"id": "b", "text": "الانحياز اليومي انقلب صاعداً ويجب الشراء"},
+      {"id": "c", "text": "شراء بحجم كامل مع استهداف High الأسبوع"},
+      {"id": "d", "text": "التعارض يعني عدم التداول نهائياً طوال الأسبوع"}
+    ],
+    "answer": "a",
+    "partial": {"d": 0.3},
+    "explanation": "الإطار الصغير يخدم الإطار الكبير: الـ Bullish MSS على 15M مع انحياز يومي هابط يُقرأ غالباً كتصحيح يبني فرصة بيع من Premium. الوقوف جانباً حتى يتضح التوافق خيار حذر، لكن إلغاء الأسبوع كاملاً مبالغة، والشراء يعاكس الإطار الأعلى."
+  },
+  {
+    "id": "TF-07",
+    "section": "mtf",
+    "type": "mcq",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["mtf", "fvg_ob", "structure"],
+    "concept": "LTF confirmation at HTF POI",
+    "question": "الانحياز اليومي صاعد، والسعر وصل إلى 1H Bullish Order Block في منطقة Discount. ما أفضل تأكيد على الإطار الصغير قبل الدخول؟",
+    "options": [
+      {"id": "a", "text": "MSS على 5M/1M مع Displacement يترك FVG، ثم الدخول عند ارتداد السعر إلى هذا الـ FVG"},
+      {"id": "b", "text": "أمر شراء معلّق على الـ Order Block مباشرة دون انتظار أي تأكيد"},
+      {"id": "c", "text": "انتظار وصول RSI إلى منطقة التشبع البيعي"},
+      {"id": "d", "text": "انتظار إغلاق الشمعة اليومية فوق High اليوم السابق"}
+    ],
+    "answer": "a",
+    "partial": {"b": 0.4},
+    "explanation": "تأكيد الإطار الصغير بـ MSS وDisplacement يثبت أن الـ POI يتفاعل فعلاً، والدخول من الـ FVG الناتج يحسّن الـ R:R. الدخول المعلّق على الـ OB أسلوب صالح لكنه بلا تأكيد، وانتظار الإغلاق اليومي يضيّع معظم الحركة."
+  },
+  {
+    "id": "TF-08",
+    "section": "mtf",
+    "type": "scenario",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["mtf", "liquidity", "decision"],
+    "concept": "Full top-down execution plan",
+    "question": "XAUUSD: الانحياز الأسبوعي صاعد. السعر على Daily رجع إلى Daily FVG بين 2310 و2318 في منطقة Discount. على 4H نزل السعر تحت Low عند 2312 إلى 2306 ثم أغلقت شمعة 4H صاعدة قوية. على 15M حدث MSS فوق 2325 تاركاً FVG بين 2320 و2323. فوق السعر BSL واضحة عند 2360. ما الخطة الأنسب؟",
+    "options": [
+      {"id": "a", "text": "انتظار ارتداد إلى 15M FVG وتحسين الدخول على 1M، مع Stop تحت قاع الـ Sweep (2306) واستهداف BSL عند 2360"},
+      {"id": "b", "text": "البيع لأن السعر كسر 2312 للأسفل وهذا BOS هابط"},
+      {"id": "c", "text": "شراء من السوق مع Stop نقطتين فقط للحصول على R:R ضخم"},
+      {"id": "d", "text": "انتظار إغلاق الشمعة الأسبوعية قبل أي قرار"}
+    ],
+    "answer": "a",
+    "explanation": "كل الأطر متوافقة: Discount يومي، Sweep لـ SSL على 4H، MSS على 15M، والهدف BSL أعلى. النزول تحت 2312 ثم الرفض هو أخذ سيولة وليس BOS، والـ Stop بنقطتين داخل ضجيج الذهب يجعل الخروج شبه مؤكد بلا سبب هيكلي."
+  },
+  {
+    "id": "TF-09",
+    "section": "mtf",
+    "type": "scenario",
+    "difficulty": "expert",
+    "points": 4,
+    "skills": ["mtf", "premium", "decision"],
+    "concept": "Monthly vs daily conflict at HTF premium",
+    "question": "الإطار الشهري هابط، والأسبوعي في ارتداد صاعد وصل الآن إلى Monthly Bearish FVG في منطقة Premium. الانحياز اليومي ما زال صاعداً. اليوم أخذت جلسة لندن High اليوم السابق (PDH)، ثم ظهر في NY Bearish MSS على 15M. ما القرار الأفضل؟",
+    "options": [
+      {"id": "a", "text": "اعتبار المنطقة نقطة انعكاس محتملة على الإطار الأعلى: بيع ممكن بحجم مخفّض مع هدف قريب كـ SSL داخل اليوم، أو الانتظار حتى يتأكد التحوّل على Daily"},
+      {"id": "b", "text": "الاستمرار في الشراء لأن الانحياز اليومي صاعد ولا شيء آخر يهم"},
+      {"id": "c", "text": "بيع بحجم كامل مع استهداف قاع الإطار الشهري مباشرة"},
+      {"id": "d", "text": "تجاهل الإطار الشهري لأنه بطيء ولا يؤثر على التداول اليومي"}
+    ],
+    "answer": "a",
+    "explanation": "وصول الارتداد الأسبوعي إلى PD Array شهري في Premium مع أخذ PDH وMSS هابط يرجّح احتمال الانعكاس، لكن الانحياز اليومي لم يتحول بعد، لذلك الحجم المخفّض والهدف القريب أو الانتظار هو التصرف المتوازن. البيع بحجم كامل نحو القاع الشهري يتجاهل أن التأكيد اليومي غير موجود."
+  },
+  {
+    "id": "TF-10",
+    "section": "mtf",
+    "type": "analytical",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["mtf", "premium", "decision"],
+    "concept": "HTF dealing range premium/discount",
+    "question": "النطاق الأسبوعي لـ EURUSD: High عند 1.1000 وLow عند 1.0800. الانحياز اليومي صاعد والسعر الآن 1.0950. ما التحليل الأدق؟",
+    "options": [
+      {"id": "a", "text": "الـ Equilibrium عند 1.0900، فالسعر في Premium الأسبوعي؛ الشراء هنا أقل جودة إلا إذا كان في Discount لنطاق أصغر (Daily/4H)، والأفضل انتظار PD Array في Discount"},
+      {"id": "b", "text": "السعر في Discount لأنه تحت 1.1000، فالشراء مثالي"},
+      {"id": "c", "text": "الـ Equilibrium عند 1.0950، فالسعر بالضبط في المنتصف"},
+      {"id": "d", "text": "مفهوم Premium/Discount لا يُطبّق على الأطر العليا"}
+    ],
+    "answer": "a",
+    "explanation": "المنتصف = (1.1000 + 1.0800) ÷ 2 = 1.0900، والسعر 1.0950 فوقه أي في Premium (عند 75% من النطاق). الفخ هو اعتبار أي سعر تحت القمة Discount، أو حساب المنتصف خطأً عند 1.0950."
+  }
+]

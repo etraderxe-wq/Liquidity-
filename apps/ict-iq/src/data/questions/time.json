@@ -1,0 +1,180 @@
+[
+  {
+    "id": "TS-01",
+    "section": "time",
+    "type": "mcq",
+    "difficulty": "easy",
+    "points": 1,
+    "skills": ["time"],
+    "concept": "London Kill Zone",
+    "question": "حسب اصطلاح ICT، ما توقيت الـ London Kill Zone بتوقيت نيويورك؟",
+    "options": [
+      { "id": "a", "text": "من 20:00 إلى 00:00" },
+      { "id": "b", "text": "من 02:00 إلى 05:00" },
+      { "id": "c", "text": "من 07:00 إلى 10:00" },
+      { "id": "d", "text": "من 13:00 إلى 16:00" }
+    ],
+    "answer": "b",
+    "explanation": "حسب اصطلاح ICT، الـ London Kill Zone من 02:00 إلى 05:00 بتوقيت نيويورك. الخيار a يقارب الجلسة الآسيوية، والخيار c هو الـ New York Kill Zone."
+  },
+  {
+    "id": "TS-02",
+    "section": "time",
+    "type": "tf",
+    "difficulty": "easy",
+    "points": 1,
+    "skills": ["time"],
+    "concept": "New York Kill Zone",
+    "question": "حسب اصطلاح ICT، الـ New York Kill Zone يمتد من 07:00 إلى 10:00 بتوقيت نيويورك.",
+    "options": [
+      { "id": "t", "text": "صح" },
+      { "id": "f", "text": "خطأ" }
+    ],
+    "answer": "t",
+    "explanation": "صحيح؛ حسب اصطلاح ICT، الـ New York Kill Zone من 07:00 إلى 10:00 بتوقيت نيويورك، ويشمل غالبًا أخبار 08:30 وافتتاح الأسهم 09:30."
+  },
+  {
+    "id": "TS-03",
+    "section": "time",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["time", "liquidity"],
+    "concept": "Asian Session Range",
+    "question": "ما الدور الأهم للجلسة الآسيوية (تقريبًا 20:00 إلى 00:00 بتوقيت نيويورك حسب اصطلاح ICT) في التداول اليومي؟",
+    "options": [
+      { "id": "a", "text": "هي الجلسة التي يتحدد فيها اتجاه اليوم دائمًا" },
+      { "id": "b", "text": "تكوّن غالبًا نطاقًا ضيقًا تتجمع فوق قمته وتحت قاعه سيولة، قد تستهدفها جلسة لندن" },
+      { "id": "c", "text": "أفضل جلسة للدخول بأحجام كبيرة بسبب السيولة العالية" },
+      { "id": "d", "text": "لا علاقة لها بما يحدث في لندن ونيويورك" }
+    ],
+    "answer": "b",
+    "explanation": "الجلسة الآسيوية تكون غالبًا هادئة وتصنع Asian Range، وقمته وقاعه مناطق Buy-side وSell-side Liquidity كثيرًا ما تُسحب في لندن. هي ليست الجلسة التي تحدد الاتجاه دائمًا ولا الأعلى سيولة."
+  },
+  {
+    "id": "TS-04",
+    "section": "time",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["time", "liquidity"],
+    "concept": "Judas Swing",
+    "question": "ما هو الـ Judas Swing حسب ICT؟",
+    "options": [
+      { "id": "a", "text": "حركة كاذبة في بداية الجلسة عكس الـ Daily Bias لسحب السيولة، قبل أن يتحرك السعر في الاتجاه الحقيقي" },
+      { "id": "b", "text": "الحركة الرئيسية لليوم في اتجاه الـ Bias" },
+      { "id": "c", "text": "فجوة سعرية تحدث عند افتتاح الأسبوع" },
+      { "id": "d", "text": "انعكاس يحدث دائمًا في نهاية جلسة نيويورك" }
+    ],
+    "answer": "a",
+    "explanation": "الـ Judas Swing هو تحرك مضلل مبكر (غالبًا قرب افتتاح لندن أو نيويورك) عكس الـ Bias ليسحب السيولة ويوقع المتداولين، ثم تبدأ الحركة الحقيقية. الخلط بينه وبين الحركة الحقيقية هو أشهر فخ."
+  },
+  {
+    "id": "TS-05",
+    "section": "time",
+    "type": "tf",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["time", "decision"],
+    "concept": "Judas Swing Direction",
+    "question": "الـ Judas Swing يكون دائمًا في نفس اتجاه الـ Daily Bias، ولذلك يُعتبر أفضل نقطة للدخول مع الاتجاه بمجرد بدايته.",
+    "options": [
+      { "id": "t", "text": "صح" },
+      { "id": "f", "text": "خطأ" }
+    ],
+    "answer": "f",
+    "explanation": "خطأ؛ الـ Judas Swing يكون عكس الـ Daily Bias، فإذا كان الـ Bias صاعدًا يكون الـ Judas هبوطًا مبكرًا لسحب الـ Sell-side. الدخول معه عند بدايته يعني الوقوع في الفخ."
+  },
+  {
+    "id": "TS-06",
+    "section": "time",
+    "type": "scenario",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["time", "liquidity", "decision"],
+    "concept": "Judas Swing in London Kill Zone",
+    "question": "الـ Daily Bias صاعد والهدف Buy-side Liquidity فوق قمة الأمس. عند 02:30 بتوقيت نيويورك (داخل الـ London Kill Zone حسب اصطلاح ICT) هبط السعر تحت قاع الجلسة الآسيوية، ثم صعد بـ Displacement وكسر الهيكل على الـ 5m تاركًا FVG. ما القراءة الأنسب؟",
+    "options": [
+      { "id": "a", "text": "الهبوط كان حقيقيًا وكسر القاع الآسيوي يعني البيع" },
+      { "id": "b", "text": "الهبوط غالبًا Judas Swing سحب Sell-side تحت القاع الآسيوي؛ البحث عن شراء عند العودة للـ FVG مع وقف تحت قاع الـ Sweep، مع إدراك أنه احتمال لا يقين" },
+      { "id": "c", "text": "انتظار جلسة نيويورك لأن لندن لا تُتداول" },
+      { "id": "d", "text": "الشراء بأي سعر لأن الاتجاه صاعد مضمون" }
+    ],
+    "answer": "b",
+    "partial": { "c": 0.3 },
+    "explanation": "سحب قاع آسيا ثم Displacement صاعد وMSS داخل الـ London Kill Zone وفي اتجاه الـ Bias هو نموذج Judas Swing، والدخول المنطقي عند العودة للـ FVG مع وقف تحت الـ Sweep. انتظار نيويورك ليس خطأ كاملًا لكنه يفوّت الإعداد الأوضح، والبيع وقوع في الفخ."
+  },
+  {
+    "id": "TS-07",
+    "section": "time",
+    "type": "scenario",
+    "difficulty": "expert",
+    "points": 4,
+    "skills": ["time", "liquidity", "decision"],
+    "concept": "New York Continuation After London",
+    "question": "الـ Daily Bias صاعد. في لندن سحب السعر قاع آسيا وصنع ما يبدو أنه قاع اليوم ثم صعد بقوة، لكنه لم يصل بعد إلى قمة الأمس (Buy-side Liquidity). عند 07:45 بتوقيت نيويورك (داخل الـ New York Kill Zone حسب اصطلاح ICT) ارتد السعر إلى Bullish FVG في الـ Discount من حركة لندن، وظهر MSS صاعد على الـ 1m. ما الخطة الأنسب؟",
+    "options": [
+      { "id": "a", "text": "البيع لأن نيويورك دائمًا تعكس حركة لندن" },
+      { "id": "b", "text": "عدم التداول لأن حركة اليوم انتهت في لندن" },
+      { "id": "c", "text": "البحث عن شراء استمراري من الـ FVG مع وقف تحت قاع الارتداد، والهدف قمة الأمس كـ Draw on Liquidity" },
+      { "id": "d", "text": "انتظار كسر قمة لندن ثم الشراء عند القمة" }
+    ],
+    "answer": "c",
+    "explanation": "ما دام الهدف (قمة الأمس) لم يُسحب بعد، فالارتداد إلى Discount في الـ New York Kill Zone مع MSS يعطي فرصة استمرار في اتجاه الـ Bias. انعكاس نيويورك لحركة لندن يُتوقع غالبًا بعد وصول الهدف وليس قاعدة دائمة، وشراء كسر القمة مطاردة في الـ Premium."
+  },
+  {
+    "id": "TS-08",
+    "section": "time",
+    "type": "mcq",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["time", "mtf"],
+    "concept": "Weekly Bias and Low of the Week",
+    "question": "إذا كان الـ Weekly Bias صاعدًا، ماذا يتوقع ICT عادةً بخصوص قاع الأسبوع (Low of the Week)؟",
+    "options": [
+      { "id": "a", "text": "يتكوّن غالبًا مبكرًا في الأسبوع (الاثنين أو الثلاثاء، وكثيرًا خلال جلسة لندن)، دون أن يكون ذلك مضمونًا" },
+      { "id": "b", "text": "يتكوّن غالبًا في منتصف الأسبوع (الأربعاء)" },
+      { "id": "c", "text": "يتكوّن دائمًا يوم الجمعة" },
+      { "id": "d", "text": "لا يمكن توقعه أبدًا لأن الوقت لا علاقة له بالسعر" }
+    ],
+    "answer": "a",
+    "partial": { "b": 0.4 },
+    "explanation": "في الأسبوع الصاعد يتوقع ICT تكوّن قاع الأسبوع مبكرًا، غالبًا الاثنين أو الثلاثاء، ثم التوسع نحو الأعلى. الأربعاء قد يصنع القاع في بعض الأسابيع لكنه احتمال أقل، أما الجمعة فغالبًا يوم جني أرباح أو انعكاس لا تكوين القاع."
+  },
+  {
+    "id": "TS-09",
+    "section": "time",
+    "type": "mcq",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["time", "advanced"],
+    "concept": "ICT Macro Times",
+    "question": "حسب اصطلاح ICT، ما المقصود بالـ Macro مثل الفترة 09:50 إلى 10:10 بتوقيت نيويورك؟",
+    "options": [
+      { "id": "a", "text": "وقت صدور الأخبار الاقتصادية الكبرى" },
+      { "id": "b", "text": "نافذة زمنية قصيرة يميل فيها السعر خوارزميًا إلى البحث عن السيولة أو موازنة FVG" },
+      { "id": "c", "text": "وقت يجب أن ينعكس فيه السعر دائمًا" },
+      { "id": "d", "text": "وقت افتتاح جلسة نيويورك للأسهم" }
+    ],
+    "answer": "b",
+    "explanation": "الـ Macro عند ICT نافذة زمنية قصيرة (حوالي 20 دقيقة) يُتوقع فيها تحرك خوارزمي لسحب سيولة أو ملء FVG، وليس انعكاسًا مضمونًا. افتتاح الأسهم 09:30 والأخبار عادةً 08:30 أو 10:00، وهي مفاهيم مختلفة."
+  },
+  {
+    "id": "TS-10",
+    "section": "time",
+    "type": "analytical",
+    "difficulty": "expert",
+    "points": 4,
+    "skills": ["time", "liquidity", "decision"],
+    "concept": "Session Highs/Lows as Liquidity with Daily Bias",
+    "question": "الـ Daily Bias هابط والهدف Sell-side Liquidity تحت قاع الأمس. عند 03:00 بتوقيت نيويورك (London Kill Zone حسب اصطلاح ICT) صعد السعر فوق قمة الجلسة الآسيوية، ثم هبط بـ Displacement تحت قاع آسيا. عند 08:00 بتوقيت نيويورك ارتد السعر إلى Bearish FVG في الـ Premium من حركة لندن الهابطة. ما التحليل الأدق؟",
+    "options": [
+      { "id": "a", "text": "كسر قمة آسيا يعني أن الـ Bias تحول إلى صاعد، فنشتري" },
+      { "id": "b", "text": "صعود لندن فوق قمة آسيا كان Judas Swing سحب Buy-side، والارتداد في نيويورك إلى الـ Bearish FVG في الـ Premium فرصة بيع محتملة نحو قاع الأمس" },
+      { "id": "c", "text": "الهدف الآن العودة إلى قمة آسيا لأنها سيولة لم تُسحب" },
+      { "id": "d", "text": "لا يمكن التحليل لأن قمة وقاع آسيا كلاهما كُسر" }
+    ],
+    "answer": "b",
+    "explanation": "قمة آسيا كانت Buy-side سُحبت في لندن كـ Judas Swing عكس الـ Bias الهابط، ثم أكد الـ Displacement تحت قاع آسيا الاتجاه، فيصبح الارتداد في الـ New York Kill Zone إلى Premium فرصة بيع نحو Sell-side قاع الأمس. قمة آسيا لم تعد سيولة متاحة لأنها سُحبت بالفعل."
+  }
+]

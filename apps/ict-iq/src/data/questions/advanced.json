@@ -1,0 +1,181 @@
+[
+  {
+    "id": "AD-01",
+    "section": "advanced",
+    "type": "mcq",
+    "difficulty": "easy",
+    "points": 1,
+    "skills": ["advanced", "liquidity"],
+    "concept": "SMT Divergence basics",
+    "question": "زوجان مترابطان إيجابياً: EURUSD كسر قاعه السابق وصنع Lower Low، بينما GBPUSD في نفس الوقت فشل في كسر قاعه السابق وصنع Higher Low. كيف يُقرأ هذا حسب ICT؟",
+    "options": [
+      {"id": "a", "text": "Bullish SMT Divergence: تصدّع في الترابط يشير إلى احتمال انعكاس صاعد بعد أخذ الـ Sell-side Liquidity"},
+      {"id": "b", "text": "Bearish SMT Divergence: إشارة لاستمرار الهبوط على الزوجين"},
+      {"id": "c", "text": "تأكيد لاستمرار الاتجاه الهابط لأن أحد الزوجين كسر القاع"},
+      {"id": "d", "text": "لا معنى له لأن الزوجين لا يتحركان دائماً بنفس المقدار"}
+    ],
+    "answer": "a",
+    "explanation": "عندما يصنع أحد الزوجين المترابطين قاعاً جديداً ويفشل الآخر، فهذا Bullish SMT يدل على ضعف في البيع واحتمال انعكاس صاعد. الفخ هو اعتبار كسر القاع في EURUSD تأكيداً للهبوط، بينما فشل GBPUSD هو ما يكشف التصدّع."
+  },
+  {
+    "id": "AD-02",
+    "section": "advanced",
+    "type": "tf",
+    "difficulty": "easy",
+    "points": 1,
+    "skills": ["advanced", "time"],
+    "concept": "Power of Three (AMD)",
+    "question": "في نموذج Power of Three (AMD) لشمعة يومية صاعدة، تظهر مرحلة Manipulation عادةً كحركة تحت سعر الافتتاح (Open) قبل مرحلة Distribution نحو الأعلى.",
+    "options": [
+      {"id": "t", "text": "صح"},
+      {"id": "f", "text": "خطأ"}
+    ],
+    "answer": "t",
+    "explanation": "في اليوم الصاعد يكون التجميع قرب الافتتاح، ثم حركة خادعة (Judas Swing) تحت الافتتاح لأخذ السيولة، ثم التوزيع صعوداً ليُغلق اليوم فوق الافتتاح. لذلك يصبح Low اليوم غالباً تحت الـ Open."
+  },
+  {
+    "id": "AD-03",
+    "section": "advanced",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["advanced", "structure"],
+    "concept": "CISD vs MSS",
+    "question": "السعر نزل بسلسلة شموع هابطة متتالية ثم بدأ يرتد. أي وصف يمثّل Bullish CISD (Change in State of Delivery) بدقة؟",
+    "options": [
+      {"id": "a", "text": "إغلاق جسم شمعة فوق سعر افتتاح سلسلة الشموع الهابطة التي أوصلت السعر إلى القاع"},
+      {"id": "b", "text": "كسر آخر Swing High بحركة Displacement قوية"},
+      {"id": "c", "text": "ظهور ذيل (Wick) فوق High الشمعة السابقة دون إغلاق"},
+      {"id": "d", "text": "تكوّن Bullish FVG في أي مكان من الحركة"}
+    ],
+    "answer": "a",
+    "partial": {"b": 0.4},
+    "explanation": "الـ CISD يُقاس بالإغلاق فوق Open أول شمعة في سلسلة الشموع الهابطة التي سلّمت السعر، فهو تغيّر في طريقة التسليم وغالباً يسبق كسر الهيكل. كسر الـ Swing High مع Displacement هو تعريف MSS، وهو تأكيد مرتبط لكنه مفهوم مختلف."
+  },
+  {
+    "id": "AD-04",
+    "section": "advanced",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["advanced", "time"],
+    "concept": "Silver Bullet NY AM window",
+    "question": "حسب تعريف ICT، ما هي نافذة NY AM Silver Bullet بتوقيت نيويورك؟",
+    "options": [
+      {"id": "a", "text": "03:00 – 04:00"},
+      {"id": "b", "text": "09:30 – 10:30"},
+      {"id": "c", "text": "10:00 – 11:00"},
+      {"id": "d", "text": "13:30 – 14:30"}
+    ],
+    "answer": "c",
+    "explanation": "نافذة NY AM Silver Bullet هي 10:00–11:00 بتوقيت نيويورك، ويُبحث فيها عن FVG للدخول باتجاه السيولة. نافذة 03:00–04:00 هي London Silver Bullet، و09:30–10:30 فخ لأنها تبدأ مع افتتاح الأسهم وليست النافذة المعرّفة."
+  },
+  {
+    "id": "AD-05",
+    "section": "advanced",
+    "type": "tf",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["advanced", "time"],
+    "concept": "IPDA 20/40/60 lookback counting",
+    "question": "في IPDA Data Ranges تُحسب فترات الـ Lookback (20/40/60) بالأيام التقويمية شاملة السبت والأحد.",
+    "options": [
+      {"id": "t", "text": "صح"},
+      {"id": "f", "text": "خطأ"}
+    ],
+    "answer": "f",
+    "explanation": "تُحسب فترات 20/40/60 بأيام التداول (Trading Days) وليس الأيام التقويمية، فالـ 20 يوماً تداولياً تعادل تقريباً شهراً تقويمياً. حسابها بالأيام التقويمية يعطي نطاقاً أقصر ويُخطئ في تحديد مستويات السيولة."
+  },
+  {
+    "id": "AD-06",
+    "section": "advanced",
+    "type": "mcq",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["advanced", "liquidity", "premium"],
+    "concept": "Market Maker Buy Model",
+    "question": "في Market Maker Buy Model (MMBM)، أين تحدث مرحلة Smart Money Reversal عادةً؟",
+    "options": [
+      {"id": "a", "text": "عند PD Array في منطقة Discount على الإطار الأعلى بعد أخذ Sell-side Liquidity في منحنى البيع"},
+      {"id": "b", "text": "داخل الـ Original Consolidation في بداية النموذج"},
+      {"id": "c", "text": "عند PD Array في منطقة Premium بعد أخذ Buy-side Liquidity"},
+      {"id": "d", "text": "عند أول BOS هابط في منحنى البيع"}
+    ],
+    "answer": "a",
+    "explanation": "في MMBM يُهندَس منحنى بيع يأخذ الـ SSL حتى يصل السعر إلى PD Array في Discount على الإطار الأعلى، وهناك يحدث الانعكاس ثم منحنى الشراء نحو سيولة الـ Original Consolidation. الانعكاس في Premium بعد أخذ BSL هو وصف Market Maker Sell Model، وهو الفخ هنا."
+  },
+  {
+    "id": "AD-07",
+    "section": "advanced",
+    "type": "scenario",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["advanced", "time", "decision"],
+    "concept": "Weekly profile: Classic Tuesday Low",
+    "question": "الانحياز الأسبوعي صاعد والـ Draw on Liquidity هو Buy-side فوق High الأسبوع الماضي. يوم الاثنين كان تجميعياً بنطاق ضيق. يوم الثلاثاء في جلسة لندن نزل السعر تحت Low يوم الاثنين ودخل Daily FVG في منطقة Discount ثم رفض بقوة. أي Weekly Profile يتوافق أكثر مع هذا السيناريو؟",
+    "options": [
+      {"id": "a", "text": "Classic Tuesday Low of the Week: قاع الأسبوع يتكوّن الثلاثاء ثم توسع صاعد في منتصف الأسبوع"},
+      {"id": "b", "text": "Wednesday Low of the Week Reversal"},
+      {"id": "c", "text": "Consolidation Thursday Reversal"},
+      {"id": "d", "text": "Seek & Destroy Friday"}
+    ],
+    "answer": "a",
+    "explanation": "أخذ سيولة Low الاثنين يوم الثلاثاء داخل Daily PD Array في Discount مع انحياز أسبوعي صاعد هو وصف Classic Tuesday Low of the Week، ويبقى احتمالاً لا تأكيداً حتى يظهر التوسع. Wednesday Reversal يتطلب أن يكون القاع الحقيقي يوم الأربعاء، وConsolidation Thursday يعني تجميع حتى الخميس ثم انعكاس."
+  },
+  {
+    "id": "AD-08",
+    "section": "advanced",
+    "type": "scenario",
+    "difficulty": "expert",
+    "points": 4,
+    "skills": ["advanced", "time", "fvg_ob", "decision"],
+    "concept": "Silver Bullet execution",
+    "question": "الساعة 10:12 بتوقيت نيويورك على EURUSD. الانحياز اليومي صاعد والـ Draw on Liquidity هو Relative Equal Highs عند 1.0880. الساعة 9:50 أخذ السعر SSL عند 1.0840 (أدنى نقطة 1.0838) ثم صعد بـ Displacement وكسر الهيكل تاركاً Bullish FVG بين 1.0848 و1.0852. السعر الآن 1.0865. ما الخطة الأفضل؟",
+    "options": [
+      {"id": "a", "text": "أمر شراء معلّق داخل الـ FVG (حوالي 1.0850) مع Stop تحت 1.0838 والهدف 1.0880، مع قبول أن الإعداد قد لا يتفعّل أو يفشل"},
+      {"id": "b", "text": "بيع لأن السعر في Premium بعد الصعود من 1.0838"},
+      {"id": "c", "text": "انتظار إغلاق الساعة 11:00 ثم الشراء من السوق مهما كان السعر"},
+      {"id": "d", "text": "شراء فوري من السوق عند 1.0865 مع Stop تحت 1.0838 والهدف 1.0880"}
+    ],
+    "answer": "a",
+    "partial": {"d": 0.3},
+    "explanation": "منطق Silver Bullet هو الدخول من FVG داخل النافذة باتجاه السيولة: من 1.0850 المخاطرة 12 نقطة والعائد 30 نقطة (1:2.5). الشراء من 1.0865 يتجه للهدف نفسه لكن بمخاطرة 27 نقطة مقابل 15 فقط (حوالي 1:0.56)، والبيع يعاكس الانحياز والـ DOL."
+  },
+  {
+    "id": "AD-09",
+    "section": "advanced",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["advanced", "liquidity"],
+    "concept": "IPDA lookback purpose",
+    "question": "ما الغرض الأساسي من النظر إلى آخر 20 و40 و60 يوم تداول ضمن مفهوم IPDA؟",
+    "options": [
+      {"id": "a", "text": "تحديد نطاقات التسعير (Dealing Ranges) ومستويات السيولة والـ PD Arrays التي يُرجّح أن يرجع إليها السعر"},
+      {"id": "b", "text": "حساب متوسط متحرك لمعرفة الاتجاه"},
+      {"id": "c", "text": "معرفة اليوم الذي سينعكس فيه السوق بشكل مؤكد"},
+      {"id": "d", "text": "تحديد حجم اللوت المناسب للصفقة"}
+    ],
+    "answer": "a",
+    "explanation": "فترات الـ Lookback تُستخدم لتحديد أعلى قمة وأدنى قاع وFVGs ضمن كل نطاق، وهي مراجع للسيولة التي قد يستهدفها السعر. هي ليست مؤشراً حسابياً كالمتوسط، ولا تعطي توقيتاً مؤكداً للانعكاس."
+  },
+  {
+    "id": "AD-10",
+    "section": "advanced",
+    "type": "analytical",
+    "difficulty": "expert",
+    "points": 4,
+    "skills": ["advanced", "liquidity", "structure", "decision"],
+    "concept": "SMT + CISD confluence at liquidity",
+    "question": "في جلسة NY AM: NQ صعد فوق High اليوم السابق (PDH)، بينما ES فشل في تجاوز PDH الخاص به. بعدها أغلقت شمعة 5M على NQ تحت سعر افتتاح سلسلة الشموع الصاعدة التي أوصلته للقمة، والسعر كان قد وصل إلى Draw on Liquidity اليومي. ما التحليل الأدق؟",
+    "options": [
+      {"id": "a", "text": "Bearish SMT عند أخذ BSL مع Bearish CISD بعد الوصول للهدف اليومي = توافق يرجّح انعكاساً هابطاً داخل اليوم، ويبقى احتمالاً يحتاج إدارة مخاطر لا يقيناً"},
+      {"id": "b", "text": "الـ SMT وحده كافٍ للبيع فوراً عند القمة دون انتظار أي تغيّر في التسليم"},
+      {"id": "c", "text": "صعود NQ فوق PDH يؤكد استمرار الصعود، والـ SMT يُتجاهل"},
+      {"id": "d", "text": "الـ CISD لا يُعتد به لأنه ظهر على NQ وليس على ES"}
+    ],
+    "answer": "a",
+    "partial": {"b": 0.3},
+    "explanation": "اجتماع SMT عند سيولة BSL مع CISD بعد وصول الـ DOL يعطي سبباً (فشل الترابط) وتأكيداً (تغيّر التسليم)، وهذا أقوى من أي منهما منفرداً. الـ SMT وحده إشارة مبكرة بلا تأكيد، أما اعتبار كسر PDH استمراراً فهو الخلط بين Liquidity Raid وBOS."
+  }
+]

@@ -1,0 +1,183 @@
+[
+  {
+    "id": "FV-01",
+    "section": "fvg",
+    "type": "mcq",
+    "difficulty": "easy",
+    "points": 1,
+    "skills": ["fvg_ob"],
+    "concept": "Bullish FVG definition",
+    "question": "في نمط من 3 شموع متتالية، متى يتكوّن Bullish FVG؟",
+    "options": [
+      {"id": "a", "text": "عندما يكون High الشمعة الأولى أقل من Low الشمعة الثالثة، والفجوة بينهما هي الـ FVG"},
+      {"id": "b", "text": "عندما يكون Low الشمعة الأولى أعلى من High الشمعة الثالثة"},
+      {"id": "c", "text": "عندما تفتح الشمعة الثانية أعلى من إغلاق الشمعة الأولى فقط"},
+      {"id": "d", "text": "عندما تكون الشموع الثلاث خضراء"}
+    ],
+    "answer": "a",
+    "explanation": "الـ Bullish FVG هو المسافة بين High الشمعة الأولى و Low الشمعة الثالثة عندما لا تتداخلان، أي جزء من الشمعة الثانية لم يُتداول عليه في الاتجاهين. الخيار (b) هو تعريف Bearish FVG."
+  },
+  {
+    "id": "FV-02",
+    "section": "fvg",
+    "type": "tf",
+    "difficulty": "easy",
+    "points": 1,
+    "skills": ["fvg_ob"],
+    "concept": "Bearish FVG definition",
+    "question": "يتكوّن Bearish FVG عندما يكون Low الشمعة الأولى أعلى من High الشمعة الثالثة.",
+    "options": [
+      {"id": "t", "text": "صح"},
+      {"id": "f", "text": "خطأ"}
+    ],
+    "answer": "t",
+    "explanation": "في الحركة الهابطة تبقى فجوة بين Low الشمعة الأولى و High الشمعة الثالثة، وهذه هي الـ Bearish FVG. الخلط بينها وبين تعريف الـ Bullish FVG خطأ شائع."
+  },
+  {
+    "id": "FV-03",
+    "section": "fvg",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["fvg_ob", "practical"],
+    "concept": "Consequent Encroachment (CE)",
+    "question": "Bullish FVG حدّه الأعلى (Low الشمعة الثالثة) = 1.1040 وحدّه الأدنى (High الشمعة الأولى) = 1.1000. أين يقع الـ Consequent Encroachment (CE)؟",
+    "options": [
+      {"id": "a", "text": "1.1000"},
+      {"id": "b", "text": "1.1020"},
+      {"id": "c", "text": "1.1040"},
+      {"id": "d", "text": "1.1030"}
+    ],
+    "answer": "b",
+    "explanation": "الـ CE هو منتصف الفجوة (50%): (1.1040 + 1.1000) / 2 = 1.1020. الحدّان 1.1000 و 1.1040 هما طرفا الـ FVG وليسا الـ CE."
+  },
+  {
+    "id": "FV-04",
+    "section": "fvg",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["fvg_ob", "structure"],
+    "concept": "Inversion FVG (IFVG)",
+    "question": "ما المقصود بـ Inversion FVG (IFVG)؟",
+    "options": [
+      {"id": "a", "text": "FVG تم ملؤه جزئيًا ثم احترمه السعر"},
+      {"id": "b", "text": "FVG فشل: أغلقت الأجسام خلفه بالكامل، فينقلب دوره (Bullish FVG يصبح مقاومة، و Bearish FVG يصبح دعمًا)"},
+      {"id": "c", "text": "فجوة بين إغلاق يوم الجمعة وافتتاح يوم الأحد"},
+      {"id": "d", "text": "FVG اخترقه ذيل شمعة فقط فأصبح ضعيفًا ويُفضّل تجاهله"}
+    ],
+    "answer": "b",
+    "partial": {"d": 0.3},
+    "explanation": "الـ IFVG هو FVG يُكسر بإغلاق جسم عبره فيتحول دوره عند إعادة الاختبار. الذيل وحده لا يحوّله إلى IFVG، وفجوة نهاية الأسبوع مفهوم مختلف (NWOG)."
+  },
+  {
+    "id": "FV-05",
+    "section": "fvg",
+    "type": "mcq",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["fvg_ob", "advanced"],
+    "concept": "Balanced Price Range (BPR)",
+    "question": "ما التعريف الأدق لـ Balanced Price Range (BPR)؟",
+    "options": [
+      {"id": "a", "text": "منطقة التداخل بين Bearish FVG و Bullish FVG متعاكسين تكوّنا في نفس النطاق السعري، حيث تم تسليم السعر في الاتجاهين"},
+      {"id": "b", "text": "أي نطاق جانبي يتحرك فيه السعر لعدة ساعات"},
+      {"id": "c", "text": "منتصف الـ Dealing Range (Equilibrium)"},
+      {"id": "d", "text": "كامل مساحة الـ FVG الأول والثاني معًا من أعلى حد لأدنى حد"}
+    ],
+    "answer": "a",
+    "partial": {"d": 0.4},
+    "explanation": "الـ BPR هو الجزء المتداخل فقط بين FVG صاعد و FVG هابط، وغالبًا ما يكون منطقة رد فعل حساسة. أخذ كامل المساحتين يوسّع المنطقة بلا داعٍ، والـ Equilibrium مفهوم مختلف."
+  },
+  {
+    "id": "FV-06",
+    "section": "fvg",
+    "type": "tf",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["fvg_ob", "structure"],
+    "concept": "FVG born from Displacement",
+    "question": "الـ FVG الذي يتكوّن ضمن Displacement قوي كسر الهيكل (MSS/BOS) أهم من FVG صغير تكوّن داخل حركة جانبية متذبذبة.",
+    "options": [
+      {"id": "t", "text": "صح"},
+      {"id": "f", "text": "خطأ"}
+    ],
+    "answer": "t",
+    "explanation": "الـ FVG الناتج عن Displacement يعكس عدم توازن حقيقي ودخول قوة مؤسسية، لذلك يحترمه السعر بنسبة أعلى. الفجوات داخل التذبذب غالبًا تُملأ وتُكسر دون قيمة."
+  },
+  {
+    "id": "FV-07",
+    "section": "fvg",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["fvg_ob", "practical"],
+    "concept": "FVG mitigation / respect",
+    "question": "رجع السعر إلى Bullish FVG. ما السلوك الذي يدل بشكل أفضل على أن الـ FVG ما زال مُحترمًا كدعم؟",
+    "options": [
+      {"id": "a", "text": "أجسام الشموع تُغلق تحت الحد الأدنى للـ FVG"},
+      {"id": "b", "text": "قد تدخل الذيول داخل الفجوة، لكن الأجسام لا تُغلق تحت الـ CE (50%) ويتفاعل السعر صعودًا"},
+      {"id": "c", "text": "يكفي أن يلمس السعر الحد الأعلى للـ FVG بغض النظر عن الإغلاقات بعدها"},
+      {"id": "d", "text": "السعر يخترق الفجوة بالكامل ثم يعود فوقها بعد عدة أيام"}
+    ],
+    "answer": "b",
+    "partial": {"c": 0.3},
+    "explanation": "الاحترام يُقرأ من الإغلاقات: ذيول داخل الفجوة مقبولة، لكن بقاء الأجسام فوق الـ CE يدل على القوة. اللمس فقط لا يكفي، والإغلاق تحت الحد الأدنى يعني فشل الـ FVG."
+  },
+  {
+    "id": "FV-08",
+    "section": "fvg",
+    "type": "scenario",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["fvg_ob", "premium", "decision"],
+    "concept": "FVG in correct context",
+    "question": "الانحياز على H4 هابط والسعر في Premium من الـ Dealing Range. على فريم 15 دقيقة: أخذ السعر BSL فوق قمة سابقة، ثم هبط بـ Displacement وصنع MSS هابطًا تاركًا Bearish FVG. وتحت السعر يوجد Bullish FVG قديم تكوّن أثناء الصعود. أي FVG هو الأعلى احتمالًا للتداول الآن؟",
+    "options": [
+      {"id": "a", "text": "الـ Bullish FVG القديم للشراء، لأن كل FVG يعطي ارتدادًا"},
+      {"id": "b", "text": "الـ Bearish FVG الناتج عن الـ MSS للبيع عند رجوع السعر إليه، باتجاه SSL"},
+      {"id": "c", "text": "كلا الـ FVG بنفس القوة؛ نتداول أيهما يصل له السعر أولًا"},
+      {"id": "d", "text": "لا FVG صالح؛ ننتظر Displacement صاعد جديد"}
+    ],
+    "answer": "b",
+    "explanation": "الـ Bearish FVG هنا يجتمع فيه السياق: انحياز H4 هابط، Premium، Sweep لـ BSL، ثم MSS بـ Displacement. الـ Bullish FVG القديم يتعارض مع الـ Order Flow الحالي وقد يُكسر ويصبح IFVG."
+  },
+  {
+    "id": "FV-09",
+    "section": "fvg",
+    "type": "scenario",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["fvg_ob", "risk", "decision"],
+    "concept": "FVG entry and stop placement",
+    "question": "بعد Sweep لـ SSL عند 2000 تكوّن MSS صاعد بـ Displacement ترك Bullish FVG بين 2010 و 2020. السياق على الفريم الأكبر صاعد. ما خطة التنفيذ الأعلى احتمالًا؟",
+    "options": [
+      {"id": "a", "text": "أمر شراء معلّق داخل الـ FVG (مثلًا عند الـ CE 2015) مع وقف خسارة تحت قاع الـ Sweep 2000"},
+      {"id": "b", "text": "شراء عند 2015 مع وقف خسارة تحت الحد الأدنى للـ FVG مباشرة (2009)"},
+      {"id": "c", "text": "شراء عند أعلى شمعة الـ Displacement مع وقف عند 1990"},
+      {"id": "d", "text": "بيع عند 2020 لأن السعر وصل لحد الـ FVG"}
+    ],
+    "answer": "a",
+    "partial": {"b": 0.4},
+    "explanation": "الدخول داخل الفجوة عند الـ CE مع وقف تحت قاع الـ Sweep يحمي الصفقة لأن الفكرة لا تُلغى إلا بكسر القاع الذي انطلق منه الـ MSS. الوقف تحت الـ FVG مباشرة أضيق لكنه معرض للضرب بذيل عادي رغم بقاء الفكرة صحيحة."
+  },
+  {
+    "id": "FV-10",
+    "section": "fvg",
+    "type": "analytical",
+    "difficulty": "expert",
+    "points": 4,
+    "skills": ["fvg_ob", "advanced", "decision"],
+    "concept": "Stacked FVGs and invalidation",
+    "question": "رجل صاعدة بـ Displacement انطلقت من قاع Sweep وتركت ثلاثة Bullish FVG متتالية. عند التصحيح، أغلقت الأجسام تحت الـ FVG الأعلى (الأقرب للقمة). ما التحليل الأدق؟",
+    "options": [
+      {"id": "a", "text": "الفكرة الصاعدة أُلغيت بالكامل؛ نبيع فورًا"},
+      {"id": "b", "text": "فشل الـ FVG الأعلى لا يلغي الفكرة وحده؛ قد يبحث السعر عن FVG أعمق في Discount، والإلغاء الحقيقي يكون بإغلاق تحت القاع الذي انطلق منه الـ Displacement"},
+      {"id": "c", "text": "الفكرة تُلغى فقط عند إغلاق الأجسام تحت أدنى FVG من الثلاثة"},
+      {"id": "d", "text": "الـ FVG الأعلى لا قيمة له أصلًا لأن كل الـ FVG الأولى تُكسر دائمًا"}
+    ],
+    "answer": "b",
+    "partial": {"c": 0.5},
+    "explanation": "الـ FVG المكدسة تعطي عدة نقاط محتملة، وكسر الأقرب للقمة يعني غالبًا أن السعر يريد Discount أعمق لا أن الترند انعكس. كسر أدنى FVG علامة ضعف قوية، لكن الإلغاء الهيكلي الحاسم هو كسر قاع الـ Sweep الذي انطلق منه الـ Displacement."
+  }
+]

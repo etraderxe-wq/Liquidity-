@@ -1,0 +1,183 @@
+[
+  {
+    "id": "MS-01",
+    "section": "structure",
+    "type": "mcq",
+    "difficulty": "easy",
+    "points": 1,
+    "skills": ["structure"],
+    "concept": "BOS / BMS = Continuation",
+    "question": "في ترند صاعد (Higher Highs و Higher Lows)، أغلق جسم شمعة فوق آخر Swing High. ماذا يُسمّى هذا الحدث في منهج ICT وماذا يعني؟",
+    "options": [
+      {"id": "a", "text": "BOS (ويسميه ICT أحيانًا BMS) — كسر في اتجاه الترند يعني استمرار الهيكل الصاعد"},
+      {"id": "b", "text": "CHoCH — تغيّر في طبيعة السوق من صاعد إلى هابط"},
+      {"id": "c", "text": "Liquidity Sweep — دائمًا يتبعه انعكاس هابط"},
+      {"id": "d", "text": "MSS هابط لأن السعر وصل إلى منطقة Premium"}
+    ],
+    "answer": "a",
+    "explanation": "الكسر بإغلاق جسم في نفس اتجاه الترند هو BOS/BMS ويدل على الاستمرار. الـ CHoCH والـ MSS يعنيان تغيّر الاتجاه ويحدثان عند كسر عكس الترند، لا معه."
+  },
+  {
+    "id": "MS-02",
+    "section": "structure",
+    "type": "tf",
+    "difficulty": "easy",
+    "points": 1,
+    "skills": ["structure", "liquidity"],
+    "concept": "Wick vs Body Close",
+    "question": "إذا تجاوز ذيل (Wick) شمعة آخر Swing High ثم أغلق جسمها تحته، فهذا يُعتبر BOS صاعدًا مؤكدًا.",
+    "options": [
+      {"id": "t", "text": "صح"},
+      {"id": "f", "text": "خطأ"}
+    ],
+    "answer": "f",
+    "explanation": "الذيل الذي يتجاوز القمة ثم يُغلق تحتها هو غالبًا أخذ للسيولة (Liquidity Sweep) وليس BOS. تأكيد الكسر يحتاج إغلاق جسم الشمعة خلف المستوى."
+  },
+  {
+    "id": "MS-03",
+    "section": "structure",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["structure"],
+    "concept": "CHoCH vs BOS",
+    "question": "السوق في ترند هابط واضح (Lower Highs و Lower Lows). ما الحدث الذي يمثل CHoCH صاعد؟",
+    "options": [
+      {"id": "a", "text": "إغلاق جسم تحت آخر Swing Low"},
+      {"id": "b", "text": "أول إغلاق جسم فوق آخر Lower High مهم، بعكس الترند الهابط"},
+      {"id": "c", "text": "ذيل يخترق آخر Lower High ثم يرجع تحته"},
+      {"id": "d", "text": "تكوين Equal Lows تحت السعر"}
+    ],
+    "answer": "b",
+    "explanation": "الـ CHoCH هو أول كسر لهيكل عكس الترند القائم، وفي الترند الهابط يكون بإغلاق فوق آخر Lower High. الإغلاق تحت الـ Swing Low هو BOS هابط (استمرار)، والذيل فقط هو Sweep وليس تغيّرًا في الهيكل."
+  },
+  {
+    "id": "MS-04",
+    "section": "structure",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["structure"],
+    "concept": "Swing High definition",
+    "question": "ما التعريف الأدق لـ Swing High في منهج ICT؟",
+    "options": [
+      {"id": "a", "text": "أعلى سعر وصل له السوق خلال اليوم"},
+      {"id": "b", "text": "شمعة لها High أعلى من High الشمعة التي قبلها وHigh الشمعة التي بعدها مباشرة (نمط 3 شموع)"},
+      {"id": "c", "text": "أي شمعة خضراء كبيرة تُغلق قرب أعلاها"},
+      {"id": "d", "text": "قمة تكوّنت بعد حركة صاعدة قوية وتبعها هبوط واضح، دون شرط على الشموع المجاورة"}
+    ],
+    "answer": "b",
+    "partial": {"d": 0.3},
+    "explanation": "الـ Swing High في ICT هو شمعة وسطى أعلى High من الشمعتين المجاورتين لها. الخيار (d) يصف قمة مهمة عمليًا لكنه غير دقيق كتعريف، وأعلى سعر يومي ليس بالضرورة Swing High."
+  },
+  {
+    "id": "MS-05",
+    "section": "structure",
+    "type": "tf",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["structure", "mtf"],
+    "concept": "Internal vs External Structure",
+    "question": "كسر Swing Low داخلي (Internal Structure) أثناء تصحيح داخل رجل صاعدة على الفريم الكبير يكفي وحده لتأكيد انعكاس الترند على الفريم الكبير.",
+    "options": [
+      {"id": "t", "text": "صح"},
+      {"id": "f", "text": "خطأ"}
+    ],
+    "answer": "f",
+    "explanation": "الهيكل الداخلي يتغير باستمرار أثناء التصحيحات، والانعكاس على الفريم الكبير يحتاج كسر الهيكل الخارجي (External) أي القاع الذي يحدد الـ Dealing Range. كسر قاع داخلي غالبًا جزء من التصحيح."
+  },
+  {
+    "id": "MS-06",
+    "section": "structure",
+    "type": "mcq",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["structure", "liquidity"],
+    "concept": "MSS requirements",
+    "question": "بعد أن أخذ السعر سيولة تحت قاع سابق (SSL)، ما الشروط التي تجعل الحركة الصاعدة التالية MSS صاعدًا حقيقيًا؟",
+    "options": [
+      {"id": "a", "text": "أن يرتد السعر بأي سرعة ويلامس أي قمة صغيرة"},
+      {"id": "b", "text": "Displacement قوي يُغلق بجسم الشمعة فوق الـ Swing High الذي انطلق منه الهبوط نحو الـ Sweep"},
+      {"id": "c", "text": "أن تظهر شمعة Pin Bar عند القاع فقط"},
+      {"id": "d", "text": "إغلاق فوق أي قمة داخلية صغيرة حتى لو كانت الحركة بطيئة ومتداخلة"}
+    ],
+    "answer": "b",
+    "partial": {"d": 0.3},
+    "explanation": "الـ MSS يتطلب Displacement وإغلاق جسم فوق الـ Swing High الذي صنع الرجل الهابطة إلى الـ Sweep. كسر قمة داخلية صغيرة بحركة بطيئة قد يكون مجرد تصحيح، والـ Sweep وحده أو شمعة انعكاسية ليسا تغيرًا في الهيكل."
+  },
+  {
+    "id": "MS-07",
+    "section": "structure",
+    "type": "scenario",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["structure", "mtf", "decision"],
+    "concept": "HTF bias + LTF MSS alignment",
+    "question": "الفريم اليومي صاعد والسعر حاليًا في منطقة Discount من الـ Dealing Range اليومي. على فريم 15 دقيقة: السعر كسر قاع Asia (أخذ SSL)، ثم صعد بـ Displacement وأغلق فوق الـ Swing High الذي انطلق منه الهبوط تاركًا FVG. ما القراءة الأعلى احتمالًا؟",
+    "options": [
+      {"id": "a", "text": "البيع لأن السعر كسر قاع Asia وهذا BOS هابط"},
+      {"id": "b", "text": "MSS صاعد متوافق مع الفريم اليومي؛ ننتظر رجوع السعر إلى الـ FVG للبحث عن شراء"},
+      {"id": "c", "text": "الشراء فورًا عند أعلى شمعة الـ Displacement دون انتظار أي رجوع"},
+      {"id": "d", "text": "لا شيء مهم حدث؛ الفريم الصغير لا علاقة له بالفريم الكبير"}
+    ],
+    "answer": "b",
+    "partial": {"c": 0.3},
+    "explanation": "أخذ SSL في Discount ثم Displacement وإغلاق فوق الـ Swing High هو MSS صاعد يتوافق مع الاتجاه اليومي، والدخول الأفضل غالبًا عند الرجوع للـ FVG. كسر قاع Asia بذيل/حركة سريعة ثم الانعكاس هو Sweep وليس BOS هابط، والشراء عند القمة يعطي مخاطرة أسوأ."
+  },
+  {
+    "id": "MS-08",
+    "section": "structure",
+    "type": "scenario",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["structure", "mtf", "decision"],
+    "concept": "LTF break inside HTF retracement",
+    "question": "فريم H4 صاعد بوضوح وآخر رجل صاعدة صنعت BOS. السعر الآن يصحح، وعلى فريم 5 دقائق ظهر CHoCH هابط والسعر ما زال فوق منتصف (Equilibrium) الرجل الصاعدة على H4. ما التصرف الأعلى احتمالًا؟",
+    "options": [
+      {"id": "a", "text": "اعتبار الترند على H4 قد انعكس والبيع بهدف قاع H4"},
+      {"id": "b", "text": "اعتبار حركة 5 دقائق تصحيحًا داخل H4، وانتظار وصول السعر إلى Discount ثم MSS صاعد على الفريم الصغير للشراء"},
+      {"id": "c", "text": "الشراء فورًا لأن H4 صاعد مهما فعل الفريم الصغير"},
+      {"id": "d", "text": "إلغاء التحليل على H4 والاعتماد فقط على فريم 5 دقائق"}
+    ],
+    "answer": "b",
+    "partial": {"c": 0.3},
+    "explanation": "الـ CHoCH على 5 دقائق داخل تصحيح H4 هو تغيّر في الهيكل الداخلي فقط، ولا يعكس الترند الكبير. الأفضل انتظار السعر في Discount ثم إشارة صاعدة على الفريم الصغير، بينما الشراء فورًا يتجاهل أن السعر ما زال في Premium من الرجل."
+  },
+  {
+    "id": "MS-09",
+    "section": "structure",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["structure", "premium"],
+    "concept": "Dealing Range",
+    "question": "كيف يُحدَّد الـ Dealing Range بشكل صحيح لقياس Premium و Discount في ترند صاعد؟",
+    "options": [
+      {"id": "a", "text": "من الـ Swing Low الذي انطلقت منه الرجل الصاعدة إلى الـ Swing High الذي صنع آخر BOS، ومنتصفه هو Equilibrium"},
+      {"id": "b", "text": "من أعلى سعر في الشهر إلى أدنى سعر في السنة"},
+      {"id": "c", "text": "من افتتاح اليوم إلى إغلاق اليوم السابق"},
+      {"id": "d", "text": "من آخر قمة داخلية صغيرة إلى آخر قاع داخلي صغير على فريم الدقيقة"}
+    ],
+    "answer": "a",
+    "explanation": "الـ Dealing Range يُرسم بين الـ Swing Low والـ Swing High للرجل التي صنعت الهيكل، والـ 50% هو الفاصل بين Premium و Discount. نقاط عشوائية أو قمم داخلية صغيرة جدًا لا تعكس النطاق الذي يتعامل فيه السوق."
+  },
+  {
+    "id": "MS-10",
+    "section": "structure",
+    "type": "analytical",
+    "difficulty": "expert",
+    "points": 4,
+    "skills": ["structure", "advanced", "decision"],
+    "concept": "Displacement quality in structure breaks",
+    "question": "قارن بين كسرين لنفس الـ Swing High بعد أخذ SSL: (1) صعود بطيء بشموع صغيرة متداخلة وذيول كثيرة، ثم إغلاق بسيط فوق القمة. (2) شمعة أو شمعتان بأجسام كبيرة تُغلق فوق القمة بوضوح وتترك FVG. أي تحليل هو الأدق؟",
+    "options": [
+      {"id": "a", "text": "الكسران متساويان لأن كليهما أغلق فوق القمة"},
+      {"id": "b", "text": "الكسر (2) أقوى لأن فيه Displacement يدل على دخول أموال مؤسسية ويترك FVG كنقطة دخول؛ الكسر (1) يحتمل أن يكون تصحيحًا أو Inducement"},
+      {"id": "c", "text": "الكسر (1) أقوى لأن الحركة البطيئة تعني ثباتًا وأمانًا أكثر"},
+      {"id": "d", "text": "الكسر (2) أقوى فقط لأن الشموع الكبيرة تعني أن السعر سيستمر بالصعود حتمًا"}
+    ],
+    "answer": "b",
+    "partial": {"d": 0.4},
+    "explanation": "الـ Displacement مع FVG هو ما يمنح الـ MSS مصداقيته لأنه يعكس عدم توازن حقيقي ويوفر PD Array للدخول، بينما الكسر البطيء المتداخل ضعيف وقد يكون فخًا. الخيار (d) يختار الكسر الصحيح لكن بتبرير خاطئ؛ لا شيء حتمي في السوق."
+  }
+]

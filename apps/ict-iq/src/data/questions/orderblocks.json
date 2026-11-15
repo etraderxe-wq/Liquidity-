@@ -1,0 +1,181 @@
+[
+  {
+    "id": "OB-01",
+    "section": "orderblocks",
+    "type": "mcq",
+    "difficulty": "easy",
+    "points": 1,
+    "skills": ["fvg_ob", "structure"],
+    "concept": "Bullish Order Block Definition",
+    "question": "حسب تعريف ICT، ما هو الـ Bullish Order Block؟",
+    "options": [
+      { "id": "a", "text": "آخر شمعة هابطة (Down-close) قبل حركة صعود قوية (Displacement) تكسر الهيكل" },
+      { "id": "b", "text": "آخر شمعة صاعدة قبل بداية الحركة الصاعدة" },
+      { "id": "c", "text": "أكبر شمعة خضراء في الحركة الصاعدة" },
+      { "id": "d", "text": "أدنى فتيل في منطقة التجميع بغض النظر عن الحركة التي بعده" }
+    ],
+    "answer": "a",
+    "explanation": "الـ Bullish OB هو آخر شمعة إغلاقها هابط قبل Displacement صاعد يكسر الهيكل، لأنها تمثل منطقة تجميع أوامر الشراء. الشمعة الصاعدة قبل الحركة ليست OB صاعد، وأكبر شمعة خضراء هي جزء من الـ Displacement نفسه."
+  },
+  {
+    "id": "OB-02",
+    "section": "orderblocks",
+    "type": "tf",
+    "difficulty": "easy",
+    "points": 1,
+    "skills": ["fvg_ob"],
+    "concept": "Bearish Order Block Definition",
+    "question": "الـ Bearish Order Block هو آخر شمعة إغلاقها صاعد (Up-close) قبل حركة هبوط قوية (Displacement) تكسر الهيكل للأسفل.",
+    "options": [
+      { "id": "t", "text": "صح" },
+      { "id": "f", "text": "خطأ" }
+    ],
+    "answer": "t",
+    "explanation": "صحيح؛ الـ Bearish OB هو عكس الصاعد تمامًا: آخر شمعة صاعدة قبل Displacement هابط يكسر Swing Low، ويُتوقع أن يتصرف كمقاومة عند العودة إليه."
+  },
+  {
+    "id": "OB-03",
+    "section": "orderblocks",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["fvg_ob", "structure"],
+    "concept": "Valid vs Invalid Order Block",
+    "question": "أي من التالي يمثل أقوى Bullish Order Block من ناحية الصلاحية حسب ICT؟",
+    "options": [
+      { "id": "a", "text": "آخر شمعة هابطة قبل صعود بطيء ومتداخل لم يكسر أي قمة" },
+      { "id": "b", "text": "آخر شمعة هابطة قبل Displacement صاعد ترك Fair Value Gap وكسر Swing High سابق" },
+      { "id": "c", "text": "آخر شمعة هابطة قبل صعود كسر Swing High ببطء ولكن بدون أي FVG" },
+      { "id": "d", "text": "أي شمعة هابطة داخل منطقة تجميع جانبية" }
+    ],
+    "answer": "b",
+    "partial": { "c": 0.4 },
+    "explanation": "الـ OB القوي يحتاج Displacement يترك FVG ويكسر الهيكل، فهذا دليل على دخول أموال مؤسسية. الخيار c فيه كسر هيكل لكنه بلا Displacement واضح فهو أضعف، أما a وd فليسا OB صالحين لأنه لا يوجد كسر هيكل ولا اندفاع."
+  },
+  {
+    "id": "OB-04",
+    "section": "orderblocks",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["fvg_ob", "liquidity", "structure"],
+    "concept": "Bullish Breaker Block",
+    "question": "ما هو الـ Bullish Breaker Block حسب ICT؟",
+    "options": [
+      { "id": "a", "text": "Bullish OB احترمه السعر وصعد منه مباشرة دون أن يكسره" },
+      { "id": "b", "text": "Bearish OB (آخر شمعة صاعدة قبل الهبوط الذي كسر قاعًا سابقًا وسحب سيولته) ثم أغلق السعر فوقه بقوة، فيصبح دعمًا عند العودة إليه" },
+      { "id": "c", "text": "Bearish OB كسره السعر للأعلى دون أن يكون الهبوط قبله قد كسر القاع السابق" },
+      { "id": "d", "text": "الفجوة بين فتيل الشمعة الأولى والثالثة في حركة صاعدة" }
+    ],
+    "answer": "b",
+    "explanation": "الـ Breaker هو OB فاشل يأتي بعد سحب سيولة: السعر يكسر قاعًا سابقًا (Sell-side sweep) ثم يصعد ويغلق فوق الـ Bearish OB فيتحول إلى دعم. الخيار c هو تعريف الـ Mitigation Block لأنه لا يوجد سحب للقاع، والخيار d هو FVG."
+  },
+  {
+    "id": "OB-05",
+    "section": "orderblocks",
+    "type": "mcq",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["fvg_ob", "liquidity", "structure"],
+    "concept": "Breaker vs Mitigation Block",
+    "question": "ما الفرق الجوهري بين الـ Breaker Block والـ Mitigation Block حسب ICT؟",
+    "options": [
+      { "id": "a", "text": "الـ Breaker يتكوّن بعد أن يكسر السعر القمة/القاع السابق (سحب سيولة) قبل الانعكاس، أما الـ Mitigation فيتكوّن عندما يفشل السعر في تجاوز القمة/القاع السابق (Failure Swing)" },
+      { "id": "b", "text": "الـ Breaker يظهر فقط على الفريمات الكبيرة والـ Mitigation فقط على الفريمات الصغيرة" },
+      { "id": "c", "text": "الـ Mitigation يتكوّن بعد سحب سيولة والـ Breaker بدون سحب سيولة" },
+      { "id": "d", "text": "لا يوجد فرق؛ كلاهما نفس المفهوم بأسماء مختلفة" }
+    ],
+    "answer": "a",
+    "explanation": "كلاهما OB فاشل يتحول لدعم/مقاومة، لكن الـ Breaker يسبقه Sweep للقمة أو القاع (Higher High أو Lower Low) بينما الـ Mitigation يتكوّن من Failure Swing بدون سحب الطرف. الخيار c يعكس التعريف وهو الفخ الأشهر."
+  },
+  {
+    "id": "OB-06",
+    "section": "orderblocks",
+    "type": "tf",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["fvg_ob"],
+    "concept": "Rejection Block",
+    "question": "الـ Rejection Block في ICT هو نفس الـ Order Block تمامًا، ويُرسم دائمًا على كامل جسم الشمعة بغض النظر عن الفتائل.",
+    "options": [
+      { "id": "t", "text": "صح" },
+      { "id": "f", "text": "خطأ" }
+    ],
+    "answer": "f",
+    "explanation": "خطأ؛ الـ Rejection Block يعتمد على الفتائل الطويلة عند القمة أو القاع، والمنطقة المهمة فيه هي من جسم الشمعة إلى طرف الفتيل حيث رُفض السعر. أما الـ OB فيعتمد على آخر شمعة معاكسة قبل الـ Displacement."
+  },
+  {
+    "id": "OB-07",
+    "section": "orderblocks",
+    "type": "scenario",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["fvg_ob", "liquidity", "decision"],
+    "concept": "Order Block After Liquidity Sweep",
+    "question": "الاتجاه على الـ 4H صاعد. على الـ 15m كسر السعر Equal Lows (سحب Sell-side Liquidity)، ثم صعد بـ Displacement قوي ترك FVG وكسر آخر Swing High قصير المدى. آخر شمعة هابطة قبل هذا الـ Displacement تقع في منطقة Discount من النطاق. ما أفضل خطة؟",
+    "options": [
+      { "id": "a", "text": "انتظار عودة السعر إلى الـ Bullish OB (أو الـ FVG المرافق له) للبحث عن شراء، مع وقف خسارة أسفل قاع الـ Sweep" },
+      { "id": "b", "text": "الشراء فورًا عند قمة الـ Displacement قبل أن يفوت السعر" },
+      { "id": "c", "text": "البيع لأن كسر الـ Equal Lows يعني أن الاتجاه أصبح هابطًا" },
+      { "id": "d", "text": "تجاهل الـ OB لأنه تحت مستوى 50% من النطاق" }
+    ],
+    "answer": "a",
+    "explanation": "سحب السيولة ثم Displacement مع FVG وكسر هيكل في اتجاه الفريم الأكبر هو أقوى سياق للـ OB، والدخول الأفضل عند العودة إليه في الـ Discount مع وقف تحت الـ Sweep، مع أن النتيجة تبقى احتمالية. كسر الـ Equal Lows هنا كان سحب سيولة وليس انعكاسًا، والشراء عند القمة مطاردة في الـ Premium."
+  },
+  {
+    "id": "OB-08",
+    "section": "orderblocks",
+    "type": "scenario",
+    "difficulty": "expert",
+    "points": 4,
+    "skills": ["fvg_ob", "premium", "decision"],
+    "concept": "OB Placement in Premium vs Discount",
+    "question": "الـ Daily Bias صاعد، والنطاق المحدد (Dealing Range) من قاع واضح إلى قمة الـ Displacement الأخيرة. السعر يرتد للأسفل الآن، وعلى الطريق يوجد: Bullish OB فوق مستوى 50% (في الـ Premium) وBullish OB آخر تحت 50% (في الـ Discount)، وكلاهما تشكّل مع Displacement. أي منطقة هي الأفضل للبحث عن شراء؟",
+    "options": [
+      { "id": "a", "text": "الـ Bullish OB في الـ Premium لأنه الأقرب للسعر" },
+      { "id": "b", "text": "الـ Bullish OB في الـ Discount تحت مستوى 50%" },
+      { "id": "c", "text": "لا يهم مكان الـ OB طالما أنه صاعد" },
+      { "id": "d", "text": "البيع من الـ Bullish OB في الـ Premium لأنه في منطقة بيع" }
+    ],
+    "answer": "b",
+    "partial": { "a": 0.3 },
+    "explanation": "حسب ICT نبحث عن الشراء في الـ Discount، فالـ Bullish OB تحت 50% يعطي أفضل سعر وأفضل نسبة عائد للمخاطرة. الـ OB في الـ Premium قد يتفاعل معه السعر لكنه أضعف لأنك تشتري غاليًا، والبيع من Bullish OB يخالف الـ Bias ومعنى الـ OB نفسه."
+  },
+  {
+    "id": "OB-09",
+    "section": "orderblocks",
+    "type": "mcq",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["fvg_ob", "liquidity", "structure"],
+    "concept": "Bearish Breaker Identification",
+    "question": "السوق كان صاعدًا، ثم صنع Higher High سحب فيه Buy-side Liquidity فوق قمة سابقة، وبعدها هبط بقوة وأغلق تحت آخر Higher Low. أين يقع الـ Bearish Breaker الذي نتوقع البيع منه عند ارتداد السعر للأعلى؟",
+    "options": [
+      { "id": "a", "text": "آخر شمعة/شموع هابطة قبل الصعود الذي صنع الـ Higher High (أي الـ Bullish OB الذي فشل وكُسر)" },
+      { "id": "b", "text": "آخر شمعة صاعدة عند القمة قبل بداية الهبوط القوي" },
+      { "id": "c", "text": "أدنى نقطة وصلها الهبوط القوي" },
+      { "id": "d", "text": "طرف فتيل الـ Higher High الذي سحب السيولة" }
+    ],
+    "answer": "a",
+    "partial": { "b": 0.4 },
+    "explanation": "الـ Bearish Breaker هو الـ Bullish OB الذي صنع الـ Higher High ثم كُسر بإغلاق تحته بعد سحب الـ Buy-side، فيتحول إلى مقاومة. الخيار b هو Bearish OB عادي عند القمة، وقد يتفاعل معه السعر لكنه ليس الـ Breaker المقصود."
+  },
+  {
+    "id": "OB-10",
+    "section": "orderblocks",
+    "type": "analytical",
+    "difficulty": "expert",
+    "points": 4,
+    "skills": ["fvg_ob", "liquidity", "premium", "decision"],
+    "concept": "Order Block Quality Confluence",
+    "question": "قارن بين إعدادين للشراء: (A) Bullish OB تشكّل بعد سحب Sell-side Liquidity، تبعه Displacement ترك FVG وكسر الهيكل (MSS)، ويقع في الـ Discount. (B) Bullish OB بدون سحب سيولة، تبعه صعود بطيء بدون FVG، ويقع في الـ Premium لكنه أقرب للسعر الحالي. ما التحليل الأدق؟",
+    "options": [
+      { "id": "a", "text": "B أفضل لأن قربه من السعر يعني دخولًا أسرع" },
+      { "id": "b", "text": "A أعلى احتمالًا لأنه يجمع سحب السيولة والـ Displacement مع FVG وكسر الهيكل والموقع في الـ Discount، بينما B يفتقد هذه العناصر وقد لا يكون OB صالحًا أصلًا" },
+      { "id": "c", "text": "الاثنان متساويان لأن كليهما آخر شمعة هابطة قبل صعود" },
+      { "id": "d", "text": "A أفضل فقط لأن شمعته أكبر حجمًا" }
+    ],
+    "answer": "b",
+    "explanation": "قوة الـ OB في ICT تأتي من السياق: Sweep ثم Displacement مع FVG وMSS وموقع Discount. كون الشمعة آخر شمعة هابطة وحده لا يكفي، والقرب من السعر ليس معيار جودة بل قد يعني شراءً في الـ Premium."
+  }
+]

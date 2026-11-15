@@ -1,0 +1,182 @@
+[
+  {
+    "id": "PD-01",
+    "section": "premium",
+    "type": "mcq",
+    "difficulty": "easy",
+    "points": 1,
+    "skills": ["premium"],
+    "concept": "Equilibrium",
+    "question": "ما المقصود بالـ Equilibrium في نطاق التداول (Dealing Range) حسب ICT؟",
+    "options": [
+      { "id": "a", "text": "أعلى قمة في النطاق" },
+      { "id": "b", "text": "مستوى 50% بين قمة النطاق وقاعه" },
+      { "id": "c", "text": "سعر افتتاح اليوم" },
+      { "id": "d", "text": "متوسط آخر 50 شمعة" }
+    ],
+    "answer": "b",
+    "explanation": "الـ Equilibrium هو منتصف النطاق (50%)، وهو الخط الفاصل بين الـ Premium فوقه والـ Discount تحته. سعر الافتتاح والمتوسطات المتحركة مفاهيم مختلفة."
+  },
+  {
+    "id": "PD-02",
+    "section": "premium",
+    "type": "tf",
+    "difficulty": "easy",
+    "points": 1,
+    "skills": ["premium"],
+    "concept": "Premium Zone",
+    "question": "حسب ICT، الجزء الذي يقع فوق مستوى 50% من نطاق التداول يُسمى Premium، وهو المنطقة المفضلة للبحث عن صفقات البيع.",
+    "options": [
+      { "id": "t", "text": "صح" },
+      { "id": "f", "text": "خطأ" }
+    ],
+    "answer": "t",
+    "explanation": "صحيح؛ فوق الـ Equilibrium السعر غالٍ نسبيًا (Premium) فنبحث فيه عن البيع، وتحته رخيص نسبيًا (Discount) فنبحث فيه عن الشراء، مع مراعاة الـ Bias دائمًا."
+  },
+  {
+    "id": "PD-03",
+    "section": "premium",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["premium", "practical"],
+    "concept": "Locating Price in the Range",
+    "question": "نطاق التداول من قاع 1.0800 إلى قمة 1.0900، والسعر الحالي 1.0880. أين يقع السعر وما الذي يفضّله ICT في هذه المنطقة؟",
+    "options": [
+      { "id": "a", "text": "في الـ Discount، والأفضل البحث عن شراء" },
+      { "id": "b", "text": "عند الـ Equilibrium تمامًا، فلا أفضلية" },
+      { "id": "c", "text": "في الـ Premium، والأفضل البحث عن بيع أو تجنب الشراء" },
+      { "id": "d", "text": "خارج النطاق، فلا يمكن الحكم" }
+    ],
+    "answer": "c",
+    "explanation": "الـ Equilibrium هو 1.0850، والسعر 1.0880 فوقه أي في الـ Premium، وهي منطقة بيع لا منطقة شراء. اختيار الـ Discount هنا خطأ في الحساب."
+  },
+  {
+    "id": "PD-04",
+    "section": "premium",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["premium"],
+    "concept": "Optimal Trade Entry (OTE)",
+    "question": "ما هي منطقة الـ Optimal Trade Entry (OTE) حسب ICT، وما مستواها المفضّل (Sweet Spot)؟",
+    "options": [
+      { "id": "a", "text": "ارتداد بين 38.2% و50%، والأفضل عند 50%" },
+      { "id": "b", "text": "ارتداد بين 62% و79%، والأفضل عند 70.5%" },
+      { "id": "c", "text": "ارتداد بين 79% و100%، والأفضل عند 88.6%" },
+      { "id": "d", "text": "امتداد بين 127% و161.8%، والأفضل عند 161.8%" }
+    ],
+    "answer": "b",
+    "explanation": "الـ OTE عند ICT هو ارتداد 62%–79% من الحركة، والـ Sweet Spot عند 70.5%، وهي تقع داخل الـ Discount للشراء أو الـ Premium للبيع. مستويات الامتداد تُستخدم للأهداف لا للدخول."
+  },
+  {
+    "id": "PD-05",
+    "section": "premium",
+    "type": "mcq",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["premium", "structure", "liquidity"],
+    "concept": "Anchoring Fibonacci on the Dealing Range",
+    "question": "بعد أن سحب السعر Sell-side Liquidity ثم صعد بـ Displacement كسر الهيكل (MSS)، كيف ترسم الـ Fibonacci لتحديد منطقة الشراء حسب منهج ICT؟",
+    "options": [
+      { "id": "a", "text": "من قمة قديمة قبل الـ Sweep إلى القاع الحالي" },
+      { "id": "b", "text": "من القاع الذي سحب السيولة (بداية الـ Displacement) إلى القمة التي صنعها الـ Displacement بعد كسر الهيكل، ثم البحث عن الشراء تحت 50% وخاصة في الـ OTE" },
+      { "id": "c", "text": "من أي شمعتين على الفريم الصغير حسب الأوضح بصريًا" },
+      { "id": "d", "text": "من القاع إلى القمة، ثم الشراء عند مستوى 23.6% لأن الاتجاه قوي" }
+    ],
+    "answer": "b",
+    "explanation": "النطاق الصحيح هو الحركة التي صنعت الإزاحة: من قاع الـ Sweep إلى قمة الـ Displacement، فهو النطاق الذي تُقاس عليه الـ Discount والـ OTE. الشراء عند 23.6% شراء في الـ Premium، والرسم من قمة قديمة يعطي نطاقًا لا علاقة له بالحركة الحالية."
+  },
+  {
+    "id": "PD-06",
+    "section": "premium",
+    "type": "tf",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["premium", "decision"],
+    "concept": "Discount Alone Is Not a Signal",
+    "question": "إذا كان السعر في منطقة Discount من النطاق، فهذا وحده سبب كافٍ للشراء بغض النظر عن الـ Bias والهيكل.",
+    "options": [
+      { "id": "t", "text": "صح" },
+      { "id": "f", "text": "خطأ" }
+    ],
+    "answer": "f",
+    "explanation": "خطأ؛ الـ Premium/Discount فلتر للموقع وليس إشارة دخول. في سوق هابط قد يستمر السعر بالهبوط عبر الـ Discount، فلا بد من توافق الـ Bias ووجود PD Array وتأكيد من الهيكل."
+  },
+  {
+    "id": "PD-07",
+    "section": "premium",
+    "type": "scenario",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["premium", "mtf", "decision"],
+    "concept": "Choosing the Right Dealing Range",
+    "question": "الـ Daily Bias صاعد والسعر حاليًا في الـ Discount من النطاق اليومي. لكن على الـ 15m، السعر في الـ Premium من آخر حركة صاعدة داخل اليوم. ما القرار الأنسب؟",
+    "options": [
+      { "id": "a", "text": "البيع لأن السعر في الـ Premium على الـ 15m" },
+      { "id": "b", "text": "الشراء فورًا لأن السعر في الـ Discount اليومي" },
+      { "id": "c", "text": "انتظار ارتداد السعر إلى الـ Discount من نطاق الـ 15m (وهو داخل الـ Discount اليومي) للبحث عن شراء" },
+      { "id": "d", "text": "تجاهل النطاق اليومي والاعتماد على الـ 15m فقط" }
+    ],
+    "answer": "c",
+    "partial": { "b": 0.4 },
+    "explanation": "الأفضل أن يتوافق الموقع على الفريمين: Discount يومي مع Discount داخلي، فيكون الدخول بسعر أفضل في اتجاه الـ Bias. الشراء الفوري مقبول جزئيًا لأنه في اتجاه الـ Bias لكنه شراء من Premium داخلي، والبيع يعاكس الـ Daily Bias."
+  },
+  {
+    "id": "PD-08",
+    "section": "premium",
+    "type": "scenario",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["premium", "practical", "decision"],
+    "concept": "Bearish OTE Calculation",
+    "question": "السعر سحب Buy-side Liquidity عند قمة 1.2750، ثم هبط بـ Displacement كسر الهيكل حتى قاع 1.2650. الـ Bias هابط وتنتظر ارتدادًا للبيع. أين أفضل منطقة بيع حسب الـ OTE؟",
+    "options": [
+      { "id": "a", "text": "بين 1.2650 و1.2700" },
+      { "id": "b", "text": "بين 1.2700 و1.2712" },
+      { "id": "c", "text": "بين 1.2712 و1.2729 تقريبًا، والأفضل قرب 1.2720" },
+      { "id": "d", "text": "فوق 1.2750 بعد كسر القمة" }
+    ],
+    "answer": "c",
+    "partial": { "b": 0.4 },
+    "explanation": "النطاق 100 نقطة، والـ OTE للبيع هو ارتداد 62%–79% للأعلى أي 1.2712–1.2729، والـ Sweet Spot 70.5% عند 1.27205 تقريبًا. المنطقة b في الـ Premium لكنها تحت الـ OTE فهي أضعف، والمنطقة a في الـ Discount فالبيع منها فخ."
+  },
+  {
+    "id": "PD-09",
+    "section": "premium",
+    "type": "mcq",
+    "difficulty": "expert",
+    "points": 4,
+    "skills": ["premium", "fvg_ob", "decision"],
+    "concept": "Bullish PD Array in Premium",
+    "question": "الـ Daily Bias صاعد، والسعر في الـ Premium من النطاق الحالي، وتكوّن Bullish FVG على الـ 5m في هذه المنطقة. ما التفسير الأدق حسب ICT؟",
+    "options": [
+      { "id": "a", "text": "إعداد شراء مثالي لأن أي Bullish FVG في سوق صاعد هو دخول عالي الاحتمال" },
+      { "id": "b", "text": "إعداد بيع لأن السعر في الـ Premium" },
+      { "id": "c", "text": "شراء أقل احتمالًا لأنه من Premium؛ الأفضل انتظار PD Array صاعد في الـ Discount، واعتبار مستويات الـ Premium أهدافًا لجني الربح" },
+      { "id": "d", "text": "يمكن الشراء منه كاستمرار بحجم أصغر إذا كان الـ Draw on Liquidity فوق السعر بوضوح" }
+    ],
+    "answer": "c",
+    "partial": { "d": 0.4 },
+    "explanation": "ICT يربط الشراء بالـ Discount Arrays، أما في الـ Premium فالأفضلية للبيع أو لجني أرباح الشراء. الاستمرار من FVG في الـ Premium ممكن بحذر إذا كان الهدف واضحًا لكنه أضعف، والبيع ضد Daily Bias صاعد بسبب الموقع فقط خطأ."
+  },
+  {
+    "id": "PD-10",
+    "section": "premium",
+    "type": "analytical",
+    "difficulty": "expert",
+    "points": 4,
+    "skills": ["premium", "fvg_ob", "practical", "decision"],
+    "concept": "Identifying the Best Buy Area",
+    "question": "الـ Bias صاعد، والنطاق من قاع 2000 إلى قمة 2100 (صنعها Displacement). الـ PD Arrays المتاحة: Bullish OB بين 2028 و2034، Bullish FVG بين 2044 و2048، Bullish OB بين 2072 و2078. أي منطقة هي الأفضل للشراء؟",
+    "options": [
+      { "id": "a", "text": "الـ Bullish OB بين 2072 و2078" },
+      { "id": "b", "text": "الـ Bullish FVG بين 2044 و2048" },
+      { "id": "c", "text": "الـ Bullish OB بين 2028 و2034" },
+      { "id": "d", "text": "انتظار كسر 2000 ثم الشراء" }
+    ],
+    "answer": "c",
+    "partial": { "b": 0.4 },
+    "explanation": "الـ Equilibrium عند 2050، والـ OTE للشراء بين 2021 و2038 (Sweet Spot قرب 2029.5)، فالـ OB بين 2028 و2034 يجمع الـ Discount والـ OTE وهو الأقوى. الـ FVG في الـ Discount لكنه خارج الـ OTE فهو أضعف، والـ OB عند 2072 في الـ Premium، وكسر 2000 يُبطل النطاق الصاعد."
+  }
+]

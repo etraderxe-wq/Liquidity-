@@ -1,0 +1,182 @@
+[
+  {
+    "id": "LQ-01",
+    "section": "liquidity",
+    "type": "mcq",
+    "difficulty": "easy",
+    "points": 1,
+    "skills": ["liquidity"],
+    "concept": "Buy-Side Liquidity location",
+    "question": "أين تتواجد Buy-Side Liquidity (BSL) عادةً؟",
+    "options": [
+      {"id": "a", "text": "تحت القيعان السابقة حيث أوامر وقف خسارة المشترين"},
+      {"id": "b", "text": "فوق القمم السابقة حيث أوامر وقف خسارة البائعين وأوامر Buy Stop للمخترقين"},
+      {"id": "c", "text": "داخل منتصف أي شمعة كبيرة"},
+      {"id": "d", "text": "عند سعر الافتتاح اليومي فقط"}
+    ],
+    "answer": "b",
+    "explanation": "الـ BSL تتجمع فوق القمم السابقة لأن البائعين يضعون وقف الخسارة فوقها والمخترقون يضعون Buy Stop هناك. ما تحت القيعان هو SSL وليس BSL."
+  },
+  {
+    "id": "LQ-02",
+    "section": "liquidity",
+    "type": "tf",
+    "difficulty": "easy",
+    "points": 1,
+    "skills": ["liquidity"],
+    "concept": "Equal Lows as SSL",
+    "question": "القيعان المتساوية (Equal Lows) تُعتبر تجمعًا واضحًا لـ Sell-Side Liquidity يميل السعر للبحث عنه.",
+    "options": [
+      {"id": "t", "text": "صح"},
+      {"id": "f", "text": "خطأ"}
+    ],
+    "answer": "t",
+    "explanation": "الـ Equal Lows يراها أغلب المتداولين دعمًا قويًا فيضعون وقف الخسارة تحتها، فتصبح مجمعًا مكثفًا لـ SSL. لذلك هي هدف وليست بالضرورة دعمًا آمنًا."
+  },
+  {
+    "id": "LQ-03",
+    "section": "liquidity",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["liquidity", "fvg_ob"],
+    "concept": "Internal vs External Range Liquidity",
+    "question": "ما الفرق بين Internal Range Liquidity و External Range Liquidity؟",
+    "options": [
+      {"id": "a", "text": "الخارجية هي القمم والقيعان التي تحدد النطاق (BSL/SSL)، والداخلية هي الفجوات وعدم التوازن داخل النطاق مثل الـ FVG"},
+      {"id": "b", "text": "الداخلية هي السيولة خلال جلسة آسيا والخارجية خلال نيويورك"},
+      {"id": "c", "text": "الخارجية تخص الأسواق الأجنبية والداخلية تخص السوق المحلي"},
+      {"id": "d", "text": "لا فرق بينهما؛ كلاهما يعني أوامر وقف الخسارة فوق القمم"}
+    ],
+    "answer": "a",
+    "explanation": "الـ ERL هي حدود النطاق حيث تقع أوامر الوقف، والـ IRL هي الـ FVG وعدم التوازن داخله، والسعر يتنقل غالبًا بين الاثنين. ربطها بالجلسات أو الأسواق المحلية خلط للمفهوم."
+  },
+  {
+    "id": "LQ-04",
+    "section": "liquidity",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["liquidity", "structure"],
+    "concept": "Liquidity Sweep vs BOS",
+    "question": "شمعة على فريم H1 اخترق ذيلها قمة سابقة واضحة ثم أغلق جسمها تحت تلك القمة. ما التوصيف الأدق؟",
+    "options": [
+      {"id": "a", "text": "BOS صاعد يؤكد استمرار الصعود"},
+      {"id": "b", "text": "Liquidity Sweep لـ BSL (أخذ للسيولة دون قبول فوق المستوى)"},
+      {"id": "c", "text": "CHoCH هابط مؤكد"},
+      {"id": "d", "text": "إشارة محتملة لضعف الشراء فوق القمة، لكنها وحدها لا تكفي لتأكيد أي شيء"}
+    ],
+    "answer": "b",
+    "partial": {"d": 0.5},
+    "explanation": "الذيل فوق القمة مع إغلاق تحتها هو Sweep لـ BSL وليس BOS لأن الجسم لم يُغلق خلف المستوى. الخيار (d) صحيح جزئيًا كقراءة لكنه لا يسمّي الحدث، والـ CHoCH يحتاج كسرًا بإغلاق لقاع مهم لا مجرد Sweep."
+  },
+  {
+    "id": "LQ-05",
+    "section": "liquidity",
+    "type": "mcq",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["liquidity", "psychology"],
+    "concept": "Inducement",
+    "question": "ما المقصود بـ Inducement في سياق السيولة؟",
+    "options": [
+      {"id": "a", "text": "أي فجوة سعرية بين شمعتين"},
+      {"id": "b", "text": "قمة أو قاع قصير المدى قريب من منطقة الاهتمام (POI) يغري المتداولين بالدخول مبكرًا، فيُؤخذ كسيولة قبل الوصول للـ POI الحقيقي"},
+      {"id": "c", "text": "الخبر الاقتصادي الذي يحرك السوق"},
+      {"id": "d", "text": "إغلاق الشمعة فوق مستوى مقاومة رئيسي"}
+    ],
+    "answer": "b",
+    "explanation": "الـ Inducement هو سيولة طُعم قريبة تجذب الدخولات المبكرة ثم تُكنس قبل أن يصل السعر للـ POI الأصلي. ليست فجوة ولا خبرًا ولا كسرًا مؤكدًا."
+  },
+  {
+    "id": "LQ-06",
+    "section": "liquidity",
+    "type": "mcq",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["liquidity", "advanced"],
+    "concept": "Turtle Soup",
+    "question": "ما الذي يصف نموذج Turtle Soup بدقة؟",
+    "options": [
+      {"id": "a", "text": "الدخول مع اختراق قمة 20 يومًا بنفس الاتجاه (Breakout)"},
+      {"id": "b", "text": "تداول الاختراق الكاذب: يأخذ السعر قمة/قاعًا سابقًا واضحًا (أوقاف المخترقين) ثم يفشل في الاستمرار، فيُدخل بعكس الاختراق"},
+      {"id": "c", "text": "الدخول عند أي Equal Highs قبل أن يصلها السعر"},
+      {"id": "d", "text": "البيع بعد أخذ قمة سابقة مباشرة دون انتظار أي رفض أو عودة تحت المستوى"}
+    ],
+    "answer": "b",
+    "partial": {"d": 0.3},
+    "explanation": "الـ Turtle Soup هو تداول فشل الاختراق بعد أخذ السيولة فوق/تحت مستوى واضح والعودة داخله. هو عكس استراتيجية Turtles للاختراق، والبيع فور أخذ القمة دون رفض يتجاهل شرط فشل الاختراق."
+  },
+  {
+    "id": "LQ-07",
+    "section": "liquidity",
+    "type": "scenario",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["liquidity", "time", "decision"],
+    "concept": "Raid on BSL in bearish daily bias",
+    "question": "الانحياز اليومي هابط وهدف السيولة اليومي (Draw on Liquidity) هو SSL أسفل قيعان الأمس. في افتتاح لندن صعد السعر وأخذ قمة جلسة آسيا ثم رُفض بقوة وأغلق تحتها، تلاه Displacement هابط كسر آخر Swing Low على فريم 5 دقائق. ما القراءة الأعلى احتمالًا؟",
+    "options": [
+      {"id": "a", "text": "أخذ قمة آسيا هو BOS صاعد؛ نشتري باتجاه الاختراق"},
+      {"id": "b", "text": "صعود لندن على الأرجح Raid على BSL (Judas Swing)؛ نبحث عن بيع بعد الـ MSS الهابط باتجاه SSL اليومية"},
+      {"id": "c", "text": "نبيع فورًا عند لمس قمة آسيا قبل أي رفض"},
+      {"id": "d", "text": "السوق بلا اتجاه؛ نشتري من SSL أسفل قيعان الأمس"}
+    ],
+    "answer": "b",
+    "partial": {"c": 0.3},
+    "explanation": "أخذ BSL فوق آسيا ثم رفض و MSS هابط متوافق مع الانحياز اليومي يجعل الصعود على الأرجح Judas Swing والهدف SSL. اعتباره BOS صاعد يتجاهل الإغلاق تحت القمة، والبيع قبل الرفض دخول بلا تأكيد."
+  },
+  {
+    "id": "LQ-08",
+    "section": "liquidity",
+    "type": "scenario",
+    "difficulty": "hard",
+    "points": 3,
+    "skills": ["liquidity", "mtf", "decision"],
+    "concept": "Draw on Liquidity",
+    "question": "على الفريم اليومي: السعر صنع MSS صاعدًا بـ Displacement قبل يومين. فوق السعر توجد Equal Highs لم تُلمس بعد، وأسفله SSL تم أخذها فعلًا قبل الـ MSS. ما هو الـ Draw on Liquidity الأرجح؟",
+    "options": [
+      {"id": "a", "text": "الـ SSL التي أُخذت سابقًا أسفل السعر"},
+      {"id": "b", "text": "الـ Equal Highs فوق السعر (BSL)"},
+      {"id": "c", "text": "منتصف الشمعة اليومية الحالية"},
+      {"id": "d", "text": "لا يمكن تحديد أي Draw لأن السوق يتحرك عشوائيًا"}
+    ],
+    "answer": "b",
+    "explanation": "بعد أخذ SSL ثم MSS صاعد، تصبح السيولة غير المأخوذة فوق السعر (Equal Highs) هي الهدف الأرجح. الـ SSL التي كُنست مسبقًا لم تعد مجمع سيولة فعّال."
+  },
+  {
+    "id": "LQ-09",
+    "section": "liquidity",
+    "type": "tf",
+    "difficulty": "medium",
+    "points": 2,
+    "skills": ["liquidity", "risk"],
+    "concept": "Raid alone is not confirmation",
+    "question": "مجرد حدوث Liquidity Raid تحت قاع سابق (أخذ SSL) يكفي وحده كتأكيد للدخول شراءً.",
+    "options": [
+      {"id": "t", "text": "صح"},
+      {"id": "f", "text": "خطأ"}
+    ],
+    "answer": "f",
+    "explanation": "أخذ SSL قد يكون استمرارًا للهبوط نحو سيولة أبعد. التأكيد يأتي من رد فعل بعده مثل Displacement و MSS صاعد ضمن سياق متوافق مع الفريم الأكبر."
+  },
+  {
+    "id": "LQ-10",
+    "section": "liquidity",
+    "type": "analytical",
+    "difficulty": "expert",
+    "points": 4,
+    "skills": ["liquidity", "advanced", "decision"],
+    "concept": "BSL run as delivery vs reversal",
+    "question": "في ترند صاعد على H4، وصل السعر لـ Equal Highs (BSL) واخترقها بـ Displacement قوي وأغلقت الأجسام فوقها وبقيت فوقها عدة شموع، تاركًا FVG خلفه. متداول يقول: «أُخذت السيولة إذن يجب أن نبيع». ما التحليل الأدق؟",
+    "options": [
+      {"id": "a", "text": "صحيح؛ أخذ BSL يعني دائمًا انعكاسًا هابطًا"},
+      {"id": "b", "text": "غير دقيق؛ الإغلاق والقبول فوق المستوى مع Displacement يرجّح أن هذا تسليم للسعر (Delivery) وليس Sweep، والأرجح رجوع لـ FVG (Internal Liquidity) ثم استهداف السيولة الخارجية التالية"},
+      {"id": "c", "text": "غير دقيق؛ لكن لا يمكن قول أي شيء، فننتظر فقط دون أي انحياز"},
+      {"id": "d", "text": "صحيح؛ لأن Equal Highs دائمًا تكون قمة الترند"}
+    ],
+    "answer": "b",
+    "partial": {"c": 0.4},
+    "explanation": "أخذ السيولة لا يعني انعكاسًا تلقائيًا؛ الفرق بين Sweep واختراق حقيقي هو الإغلاق والقبول خلف المستوى مع Displacement. هنا يتحرك السعر من External إلى Internal (الـ FVG) ثم إلى External التالية، والانتظار بلا انحياز أحوط لكنه يتجاهل قراءة الـ Order Flow."
+  }
+]
