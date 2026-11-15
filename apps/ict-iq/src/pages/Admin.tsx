@@ -4,6 +4,7 @@ import type { Question, Difficulty, SectionId } from '../types';
 import { getBank, getOverlay, upsertQuestion, deleteQuestion, resetBank, validate, SECTIONS, DEFAULT_POINTS, pts, BUILTIN } from '../lib/bank';
 import { getHistory } from '../lib/session';
 import { credit } from '../lib/scoring';
+import { saveFile } from '../lib/save';
 import CandleChart from '../components/CandleChart';
 const TEMPLATE: Question = { id: 'NEW-01', section: 'structure', type: 'mcq', difficulty: 'medium', skills: ['structure'], concept: 'مفهوم جديد',
   question: 'نص السؤال؟', options: [{ id: 'a', text: 'خيار أ' }, { id: 'b', text: 'خيار ب' }, { id: 'c', text: 'خيار ج' }, { id: 'd', text: 'خيار د' }], answer: 'a', explanation: 'الشرح.' };
@@ -23,8 +24,7 @@ export default function Admin() {
     hist.forEach(a => a.qids.forEach(id => { const qq = bank.find(b => b.id === id); if (!qq) return; const k = qq.concept, r = (m[k] ??= { concept: k, wrong: 0, seen: 0 }); r.seen++; if (credit(qq, a.answers[id]?.choice) < 1) r.wrong++; }));
     return Object.values(m).filter(r => r.wrong).sort((x, y) => y.wrong / y.seen - x.wrong / x.seen || y.wrong - x.wrong); }, [hist, bank]);
   const board = [...hist].filter(a => a.mode === 'challenge').sort((x, y) => y.result!.score - x.result!.score);
-  const exportBank = () => { const blob = new Blob([JSON.stringify(bank, null, 2)], { type: 'application/json' }); const u = URL.createObjectURL(blob);
-    const l = document.createElement('a'); l.href = u; l.download = 'ict-iq-questions.json'; l.click(); URL.revokeObjectURL(u); };
+  const exportBank = () => { const blob = new Blob([JSON.stringify(bank, null, 2)], { type: 'application/json' }); saveFile('ict-iq-questions.json', blob); };
   const importBank = (f: File) => f.text().then(t => { try { const arr = JSON.parse(t) as Question[]; const bad = arr.map(x => [x.id, validate(x)] as const).filter(x => x[1].length);
     if (bad.length) { setMsg('ملف غير صالح: ' + bad.slice(0, 3).map(b => b[0] + ' (' + b[1].join(', ') + ')').join(' · ')); return; }
     arr.forEach(upsertQuestion); setMsg(`تم استيراد ${arr.length} سؤال`); setVer(v => v + 1); } catch (e) { setMsg('JSON: ' + (e as Error).message); } });
@@ -37,7 +37,7 @@ export default function Admin() {
     y += 8; line('Most failed concepts (by question id)', 12, true);
     fails.slice(0, 25).forEach(f => { const ids = bank.filter(b => b.concept === f.concept).map(b => b.id).join(', '); line(`  ${ids}: wrong ${f.wrong}/${f.seen} (${Math.round(100 * f.wrong / f.seen)}%)`); });
     if (!fails.length) line('  No data yet.');
-    d.save('ict-iq-admin-report.pdf'); };
+    saveFile('ict-iq-admin-report.pdf', d.output('blob')); };
   const T = (id: Tab, t: string) => <button className={'rounded-lg px-4 py-2 text-sm ' + (tab === id ? 'bg-cyan text-navy font-bold' : 'text-mut hover:text-ink')} onClick={() => setTab(id)}>{t}</button>;
   return (<div className="fade-in space-y-4">
     <div className="flex flex-wrap items-center justify-between gap-3"><h2 className="text-2xl font-black">لوحة الإدارة</h2>

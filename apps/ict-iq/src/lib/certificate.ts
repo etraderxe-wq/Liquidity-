@@ -1,3 +1,4 @@
+import { saveFile } from './save';
 import { jsPDF } from 'jspdf';
 import logoUrl from '../assets/logo.png';
 // Certificate drawn on a canvas (correct Arabic shaping), then exported as PNG or embedded in a PDF.
@@ -27,8 +28,8 @@ export async function drawCertificate(d: CertData): Promise<HTMLCanvasElement> {
 }
 export async function downloadCertificate(d: CertData, kind: 'pdf' | 'png') {
   const c = await drawCertificate(d), data = c.toDataURL('image/png');
-  if (kind === 'png') { const a = document.createElement('a'); a.href = data; a.download = `${d.certId}.png`; a.click(); return; }
-  const pdf = new jsPDF({ orientation: 'landscape', unit: 'pt', format: [c.width / 2, c.height / 2] }); pdf.addImage(data, 'PNG', 0, 0, c.width / 2, c.height / 2); pdf.save(`${d.certId}.pdf`);
+  if (kind === 'png') { await saveFile(`${d.certId}.png`, await (await fetch(data)).blob()); return; }
+  const pdf = new jsPDF({ orientation: 'landscape', unit: 'pt', format: [c.width / 2, c.height / 2] }); pdf.addImage(c.toDataURL('image/jpeg', .92), 'JPEG', 0, 0, c.width / 2, c.height / 2); await saveFile(`${d.certId}.pdf`, pdf.output('blob'));
 }
 export async function shareCertificate(d: CertData) {
   const c = await drawCertificate(d); const blob: Blob = await new Promise(ok => c.toBlob(b => ok(b!), 'image/png'));
